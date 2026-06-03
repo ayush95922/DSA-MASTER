@@ -1,0 +1,974 @@
+[
+  {
+    "id": 1,
+    "name": "TCS",
+    "slug": "tcs",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "India's largest IT consultant, focusing heavily on foundations, string manipulation, and core mathematical algorithms.",
+    "tier": "TIER_3",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Hashing"
+    ],
+    "mostAskedQuestions": [
+      "two-sum",
+      "contains-duplicate",
+      "valid-anagram"
+    ],
+    "preparationTimeline": "Week 1: Array Traversals & Basic Loops - Master linear iterations, prime factor checks, and basic math logics. | Week 2: String Parsing & Palindromes - Practice string reversals, character counts, and anagram matchings. | Week 3: Searching & Sorting Foundations - Master Binary Search and basic Bubble/Selection sorting algorithms. | Week 4: Technical MCQs & Core CS - Review final year projects, SQL joins, and basic OOP principles.",
+    "interviewProcess": "Cognitive & Aptitude Assessment: Automated test covering numerical ability, verbal skills, and basic logic. | NQT Coding Assessment: Solve two easy-to-medium coding problems primarily focused on array operations or string transformations. | Technical Interview: Discussion on final year projects, computer network basics, database joins, and coding dry runs. | HR & Cultural Interview: Final fitment round evaluating communication skills and flexibility.",
+    "difficultyBreakdown": {
+      "easy": 70,
+      "medium": 25,
+      "hard": 5
+    },
+    "faqs": [
+      {
+        "question": "What is the typical coding difficulty in TCS NQT?",
+        "answer": "The coding section features Easy to lower-Medium difficulty questions focusing on fundamental math, array manipulations, and string processing."
+      },
+      {
+        "question": "How many rounds does the TCS selection process have?",
+        "answer": "Typically 3-4 rounds: Online assessment (Aptitude + Coding), Technical Interview, and final HR interview."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "TCS Digital Candidate",
+        "rounds": "OA + Technical + HR",
+        "questionsAsked": [
+          "Check if a number is a prime palindrome",
+          "Find the second largest element in an array in a single pass"
+        ],
+        "difficulty": "Easy",
+        "tips": "Focus heavily on logic building. Explain your brute force approach before writing code."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 95,
+      "Strings": 90,
+      "Hashing": 65,
+      "Searching": 70,
+      "Sorting": 60
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Arrays & Mathematics",
+        "focus": "Master core traversals, prime checking, and basic arithmetic logic."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Strings",
+        "focus": "Practice string reversal, character indexing, and basic anagram matching."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Searching & Sorting",
+        "focus": "Implement binary search boundaries and in-place swaps cleanly."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Mock OA Assessments",
+        "focus": "Simulate mock tests using last year's TCS NQT coding sets."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Infosys",
+    "slug": "infosys",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "IT giant targeting array manipulation, hash map lookups, and basic binary tree structures during recruitment tests.",
+    "tier": "TIER_3",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "contains-duplicate",
+      "valid-anagram"
+    ],
+    "preparationTimeline": "Week 1: List Traversals & Hash Maps - Master prefix sums, subarray totals, and key element lookups. | Week 2: String Matching & Two Pointers - Solve character frequency arrays and duplicates detection. | Week 3: Basic Data Structures - Review Singly Linked List operations and pointer movements. | Week 4: DBMS & OOPs Foundations - Review standard SQL queries, OOP principles, and class designs.",
+    "interviewProcess": "Online Assessment (HackWithInfy / InfyTQ): Automated assessment featuring coding questions ranging from Medium to Hard. | Technical Screen Interview: In-depth discussion on database normalization, SQL queries, coding logic, and project details. | HR Assessment: Managerial behavioral assessment and communication evaluation.",
+    "difficultyBreakdown": {
+      "easy": 60,
+      "medium": 35,
+      "hard": 5
+    },
+    "faqs": [
+      {
+        "question": "What is the coding pattern in Infosys SP/DSE assessments?",
+        "answer": "Infosys Specialist Programmer (SP) and Digital Specialist Engineer (DSE) assessments focus on Medium to Hard topics like Trees, Graphs, and Dynamic Programming."
+      },
+      {
+        "question": "How to prepare for Infosys technical interview?",
+        "answer": "Focus heavily on DBMS, SQL queries, OOPs, and basic DSA concepts like Linked List reversals and Binary Search."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Infosys DSE Candidate",
+        "rounds": "InfyTQ OA + Technical Screen + HR",
+        "questionsAsked": [
+          "Given a list of strings, find all anagram pairings",
+          "Reverse a Linked List recursively"
+        ],
+        "difficulty": "Medium",
+        "tips": "Explain SQL joins and normalization concepts thoroughly when asked. They love database fundamentals."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 90,
+      "Strings": 85,
+      "Searching": 80,
+      "Hashing": 75,
+      "Sorting": 70
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Arrays & Pointers",
+        "focus": "Master prefix sums, subarray totals, and key element lookups."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Hash Maps & Strings",
+        "focus": "Solve character frequency arrays and duplicates detection."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Basic Data Structures",
+        "focus": "Review Singly Linked List operations and pointer movements."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Infosys Mock assessment",
+        "focus": "Tackle Infosys specific sample tests and timed coding mocks."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Wipro",
+    "slug": "wipro",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "Global IT consultant assessing basic variables, sorting algorithms, and string searching bounds.",
+    "tier": "TIER_3",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "contains-duplicate",
+      "two-sum"
+    ],
+    "preparationTimeline": "Week 1: Math & Basic Recursion - Review basic recursive logic, prime factors, and looping setups. | Week 2: Linear Traversals & Indexing - Practice scanning arrays, boundary checks, and string indexing. | Week 3: Standard Searching & Sorting - Be comfortable implementing Bubble Sort, Selection Sort, and Linear Search. | Week 4: Networking & Operating Systems - Brush up on TCP/IP layers, process states, and OS basic concepts.",
+    "interviewProcess": "Wipro Elite NTH Assessment: Automated exam containing basic aptitude, verbal, and 2 easy coding questions on platform. | Technical Interview: Reviewing core programming knowledge, live dry running, and project structure. | HR Interview: Basic communication and cultural suitability check.",
+    "difficultyBreakdown": {
+      "easy": 65,
+      "medium": 30,
+      "hard": 5
+    },
+    "faqs": [
+      {
+        "question": "What is the difficulty of Wipro Elite NTH coding questions?",
+        "answer": "Generally Easy. Questions are simple arithmetic, basic array updates, or standard string validations."
+      },
+      {
+        "question": "Are there separate technical and HR interviews in Wipro?",
+        "answer": "Yes, Wipro uses a 2-stage interview process: a Technical interview covering basic coding + projects, followed by an HR interview."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Wipro Elite Candidate",
+        "rounds": "Amcat Test + Tech + HR",
+        "questionsAsked": [
+          "Check for valid parenthesis",
+          "Fibonacci series using recursion"
+        ],
+        "difficulty": "Easy",
+        "tips": "Focus on clean coding style. Be prepared to answer basic OOP concepts like inheritance and polymorphism."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 92,
+      "Strings": 88,
+      "Searching": 70,
+      "Sorting": 65,
+      "Hashing": 60
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Math & Basics",
+        "focus": "Review recursion basics, prime factors, and basic loop setups."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Linear Traversals",
+        "focus": "Practice scanning arrays, index bounds, and string indexing."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Standard Sorting",
+        "focus": "Be comfortable implementing Bubble Sort, Selection Sort, and Linear Search."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Practice Mocks",
+        "focus": "Solve high-frequency previous Wipro Elite coding questionnaires."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Accenture",
+    "slug": "accenture",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "Leading consultant targeting dynamic programming basics, arrays, and standard recursion loops.",
+    "tier": "TIER_3",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "two-sum",
+      "valid-parentheses"
+    ],
+    "preparationTimeline": "Week 1: Contiguous Array Processing - Practice scanning segments, array partitioning, and index sums. | Week 2: String Parsing & Anagrams - Review anagram frequencies, string parsing, and character tracking. | Week 3: Hashing & Logic - Master Binary Search and basic hashing keys logic. | Week 4: Software Engineering Concepts - Review SDLC models, database structures, and testing types.",
+    "interviewProcess": "Cognitive and Technical Assessment: Automated test measuring cognitive capability and basic tech skills. | Timed Coding Test: Solve 2 coding problems focusing on arrays, strings, or sliding windows. | Technical & HR Interview: Discussion about resume projects, OOPs, web technologies, and candidate profile.",
+    "difficultyBreakdown": {
+      "easy": 60,
+      "medium": 35,
+      "hard": 5
+    },
+    "faqs": [
+      {
+        "question": "Does Accenture have elimination rounds in its OA?",
+        "answer": "Yes. The Cognitive and Technical section is an elimination round. If cleared, you immediately start the coding assessment."
+      },
+      {
+        "question": "What is the typical difficulty of Accenture coding rounds?",
+        "answer": "Usually one Easy question (e.g. array manipulation) and one Medium question (e.g. bitmasking or basic DP/Greedy)."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Accenture ASE Candidate",
+        "rounds": "Cognitive + Technical OA + Interview",
+        "questionsAsked": [
+          "Binary search in a sorted array",
+          "Remove consecutive duplicate characters from a string"
+        ],
+        "difficulty": "Easy",
+        "tips": "Brush up on computer networking, Operating Systems, and software engineering terms before the technical interview."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 94,
+      "Strings": 90,
+      "Searching": 80,
+      "Hashing": 75,
+      "Sorting": 65
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Contiguous Arrays",
+        "focus": "Practice scanning segments, array partitioning, and index sums."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "String Processing",
+        "focus": "Review anagram frequencies, string parsing, and character tracking."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Logical Searching",
+        "focus": "Master Binary Search and basic hashing keys logic."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Cognitive & Prep checks",
+        "focus": "Practice MCQ sections alongside mock coding papers."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Capgemini",
+    "slug": "capgemini",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "Assesses array indexing, sorting techniques, and basic hash table implementations.",
+    "tier": "TIER_3",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "contains-duplicate",
+      "two-sum"
+    ],
+    "preparationTimeline": "Week 1: Pseudocode & Logic Trace - Practice trace tables, bitwise shifts, and conditional conditional loops. | Week 2: Array Swaps & Segments - Review array operations, sorting bounds, and swaps. | Week 3: String Palindromes & Rotations - Solve basic palindrome matching and compression tricks. | Week 4: Project Discussion & OOPs - Review database models, Java OOPs concepts, and project diagrams.",
+    "interviewProcess": "Game-Based Assessment: Online interactive games evaluating analytical behavior and memory. | Pseudocode & Coding Test: Solve analytical pseudocode dry runs and 1-2 coding problems. | Technical Interview: Reviewing code logic, OOPs, project tech stack, and systems. | HR Interview: Career discussions and cultural fitment.",
+    "difficultyBreakdown": {
+      "easy": 60,
+      "medium": 35,
+      "hard": 5
+    },
+    "faqs": [
+      {
+        "question": "What is Capgemini's Pseudocode round?",
+        "answer": "It is a highly conceptual test of basic code debugging, loop dry runs, and time complexity checks in the initial filter stage."
+      },
+      {
+        "question": "How difficult are Capgemini's coding questions?",
+        "answer": "Generally Easy to lower-Medium. Most focus on string parsing, basic math structures, and simple sorting algorithms."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Capgemini Analyst Role",
+        "rounds": "Game OA + Pseudocode + Technical",
+        "questionsAsked": [
+          "Check if string is a rotation of another",
+          "Find all pairs in array with a given target sum"
+        ],
+        "difficulty": "Easy",
+        "tips": "Practice game-based assessment formats beforehand as they are unique. In interviews, stay calm and express key thoughts."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 90,
+      "Strings": 88,
+      "Searching": 75,
+      "Sorting": 70,
+      "Hashing": 65
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Pseudocode Tracking",
+        "focus": "Practice trace tables, bitwise shifts, and conditional outcomes."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Contiguous Grids",
+        "focus": "Review array operations, sorting bounds, and swaps."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "String Algorithms",
+        "focus": "Solve basic palindrome matching and compression tricks."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Mock assessments",
+        "focus": "Complete 3 Capgemini mock exams under tight visual timers."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Cognizant",
+    "slug": "cognizant",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "Recruits through tests analyzing linked list operations, binary search peaks, and sliding windows.",
+    "tier": "TIER_3",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "two-sum",
+      "valid-anagram"
+    ],
+    "preparationTimeline": "Week 1: Linked List Operations - Master Singly/Doubly Linked list insertions, pointer shifts, and mergers. | Week 2: Monotonic Stacks & Queues - Practice basic stack pushes, parenthesis validations, and next greater elements. | Week 3: Binary Search Peaks - Master binary search bounds, rotations, and element detections. | Week 4: Relational DB & SQL - Write queries, review DBMS architecture, index locks, and schema definitions.",
+    "interviewProcess": "Aptitude & Technical OA: Initial assessment testing verbal capability, analytical logic, and database MCQs. | Coding Assessment (GenC Elevate): Solve 2 coding problems primarily on sliding windows, array algorithms, or string manipulation. | Technical Interview: Deep dive into DSA logic, live code writing, database models, and SQL joins. | HR Alignment: Behavioral suitability and document verification.",
+    "difficultyBreakdown": {
+      "easy": 60,
+      "medium": 35,
+      "hard": 5
+    },
+    "faqs": [
+      {
+        "question": "What is the Cognizant GenC Developer coding test like?",
+        "answer": "The test features Easy-Medium coding puzzles (primarily array/string traversals) along with pseudocoding MCQs."
+      },
+      {
+        "question": "Does Cognizant focus on DB questions?",
+        "answer": "Yes. Basic database schemas, SQL operations (joins, aggregates), and indexing are frequently asked in the interview."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Cognizant GenC Elevate Candidate",
+        "rounds": "OA + Tech + HR",
+        "questionsAsked": [
+          "Merge two sorted arrays in-place",
+          "Find next greater element using a stack"
+        ],
+        "difficulty": "Medium",
+        "tips": "Tackle OOPs, basic structures, and SQL queries first. They highly value database normalization answers."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 91,
+      "Strings": 89,
+      "Searching": 76,
+      "Sorting": 68,
+      "Hashing": 62
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Contiguous arrays",
+        "focus": "Solve basic subarray checks, sum ranges, and elements insertion."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "String manipulation",
+        "focus": "Check for unique character limits and anagram frequency grids."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Database basics",
+        "focus": "Review standard SQL queries, table locks, and key references."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Elevate timed mocks",
+        "focus": "Tackle sample timed papers designed for Cognizant recruitment tests."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Amazon",
+    "slug": "amazon",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    "description": "E-commerce giant prioritizing advanced graphs, dynamic programming, priority queues, and behavioral criteria.",
+    "tier": "TIER_1",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "two-sum",
+      "valid-parentheses"
+    ],
+    "preparationTimeline": "Week 1: Heaps & Monotonic Stacks - Master sliding window extremes, priority queues, and LRU Cache structures. | Week 2: Graph DFS/BFS Traversals - Practice topological sort, cycle detection, and shortest pathways on acyclic graphs. | Week 3: Dynamic Programming Arrays - Formulate state equations, bottom-up matrix allocations, and knapsack optimizations. | Week 4: Amazon Leadership Principles - Structure past accomplishments using the STAR model mapped to Amazon's 16 LPs.",
+    "interviewProcess": "Online Assessment: Solve two medium-to-hard coding problems followed by a comprehensive system work simulation. | Technical Interview I (Coding & LPs): Solve algorithmic problems while explaining dynamic complexity under Leadership Principles. | Technical Interview II (Advanced DSA): Live whiteboarding on advanced tree properties, graph paths, or complex Dynamic Programming. | Bar Raiser Interview: High-level architectural, algorithmic, and cultural evaluation focused on LP alignment.",
+    "difficultyBreakdown": {
+      "easy": 15,
+      "medium": 55,
+      "hard": 30
+    },
+    "faqs": [
+      {
+        "question": "How important are Leadership Principles (LPs) at Amazon?",
+        "answer": "Extremely critical. Almost 50% of the interview score relies on how well your past projects demonstrate Amazon's 16 Leadership Principles."
+      },
+      {
+        "question": "What is the typical coding difficulty in Amazon interviews?",
+        "answer": "Medium to Hard. Focus is heavily on sliding window, heaps, priority queues, graphs (Dijkstra/Topological Sort), and Dynamic Programming."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Amazon SDE-1 Candidate",
+        "rounds": "OA + 3 Tech (Coding + LP)",
+        "questionsAsked": [
+          "Sliding Window Maximum",
+          "Course Schedule (Topological Sort)"
+        ],
+        "difficulty": "Hard",
+        "tips": "For every answer, describe how you applied specific leadership principles. Structure your behavioral examples using the STAR method."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 95,
+      "Strings": 90,
+      "Searching": 85,
+      "Dynamic Programming": 80,
+      "Sorting": 75
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Arrays & Sliding Boundary",
+        "focus": "Solve complex sliding window, prefix metrics, and key lookups."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Linked Lists & Monotonic Stacks",
+        "focus": "Master pointer operations, LRU Cache setup, and next greater arrays."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Binary Trees & Graphs Sweep",
+        "focus": "Practice depth searches, topological sort steps, and shortest paths."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "DP & LP Mock Interview checks",
+        "focus": "Review Amazon's 16 Leadership Principles alongside dynamic grids."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Google",
+    "slug": "google",
+    "logo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "description": "Global technology leader assessing highly efficient complex segment trees, advanced graphs, and recursion.",
+    "tier": "TIER_1",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "two-sum"
+    ],
+    "preparationTimeline": "Week 1: Segment Trees & Fenwick - Master range query structures, segment manipulations, and tree updates. | Week 2: Advanced Graph Algorithms - Deep dive into Dijkstra, Union Find disjoint sets, and network flow matrices. | Week 3: Bitmask DP & State-Space - Practice state reductions, memory optimizations, and matrix pathfinding. | Week 4: Googleyness & Case Studies - Study team collaboration, scalability design, open-ended problem solving, and mock dry-runs.",
+    "interviewProcess": "Technical Phone Screen: 45-minute coding round on a Google Doc assessing coding cleanliness, naming, and complexity explanation. | Onsite Coding Round I: Advanced graph networks, topological pathways, or tree node balancers. | Onsite Coding Round II: State-space Dynamic Programming, segment trees, or custom mathematical arrays. | Googleyness & Leadership Round: Assessing cultural fitness, inclusive decision making, and navigation of ambiguous situations.",
+    "difficultyBreakdown": {
+      "easy": 15,
+      "medium": 55,
+      "hard": 30
+    },
+    "faqs": [
+      {
+        "question": "What does Google look for in coding rounds?",
+        "answer": "They evaluate your problem-solving process, boundary checks, efficiency (time/space complexity), and communication skills. They expect clean code."
+      },
+      {
+        "question": "Does Google ask about standard templates?",
+        "answer": "Rarely. Google coding questions are unique, highly customized, and frequently combine multiple topics (e.g. Tree traversals + DP)."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Google SWE Candidate",
+        "rounds": "1 Phone Screen + 4 Onsite Rounds",
+        "questionsAsked": [
+          "Implement a custom scheduler with priorities and dependencies",
+          "Longest Path in a Directed Acyclic Graph"
+        ],
+        "difficulty": "Hard",
+        "tips": "Do not rush to code. Spend the first 10 minutes discussing your approach, edge cases, and time/space trade-offs with the interviewer."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 95,
+      "Strings": 92,
+      "Searching": 88,
+      "Dynamic Programming": 85,
+      "Sorting": 72
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Arrays & Hash Grids",
+        "focus": "Master prefix lookups, segment splits, and sliding intervals."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Trees & Graph Sweeps",
+        "focus": "Tackle topological sort, DFS pathways, and tree nodes balancer."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Dynamic Programming",
+        "focus": "Formulate dynamic state spaces and bottom-up matrices logic."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Advanced Graph sweeps",
+        "focus": "Master Segment Trees, Union Find, and Dijkstra's paths."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Microsoft",
+    "slug": "microsoft",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+    "description": "Technology pioneer focusing on tree nodes, AVL balancer operations, DFS/BFS graph scans, and heaps.",
+    "tier": "TIER_1",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "two-sum",
+      "valid-parentheses"
+    ],
+    "preparationTimeline": "Week 1: Linked Lists & Pointers - Master reversing pointers, detecting loops, and fast/slow pointer traversals. | Week 2: AVL Trees & Balance - Review depth searches, tree balance validations, and lowest common ancestor logic. | Week 3: DFS & BFS Graph Scans - Practice connectivity tracking, matrix traversals, and bidirectional path searches. | Week 4: System Design Architecture - Study microservices, message queues, relational vs NoSQL, and scalability bottlenecks.",
+    "interviewProcess": "Codility Online Assessment: Automated screening test on Codility containing 3 medium coding questions focused on edge cases. | Technical Onsite Round I: Live coding focusing on array partitions, string parsing, or custom stack behaviors. | Technical Onsite Round II: Custom tree structures, recursively traversing nodes, and algorithmic design. | System Design Interview: Design large-scale distributed systems, discussing caching, databases, and scaling principles.",
+    "difficultyBreakdown": {
+      "easy": 15,
+      "medium": 55,
+      "hard": 30
+    },
+    "faqs": [
+      {
+        "question": "What is the focus of Microsoft Codility OA?",
+        "answer": "The online assessment usually consists of 3 coding questions of Medium difficulty to be solved in 120 minutes on Codility."
+      },
+      {
+        "question": "Does Microsoft ask system design questions?",
+        "answer": "Yes. In SWE interviews, they frequently spend one full round evaluating system design patterns (e.g. designing WhatsApp or a URL shortener)."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Microsoft SDE-1 Candidate",
+        "rounds": "Codility OA + 3 Tech Onsite",
+        "questionsAsked": [
+          "Merge intervals recursively",
+          "Binary Tree Level Order Traversal"
+        ],
+        "difficulty": "Medium",
+        "tips": "Focus on array, string, and tree structures. Microsoft places high value on clean, bug-free implementations of classical algorithms."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 93,
+      "Strings": 91,
+      "Searching": 84,
+      "Dynamic Programming": 78,
+      "Sorting": 76
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Contiguous arrays",
+        "focus": "Solve subarray modifications, key frequency tracking, and swaps."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Linear Linked Lists",
+        "focus": "Reversing list pointers, detecting loops, and swapping nodes."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Trees & Traversals",
+        "focus": "Review depth searches, tree balance limits, and key nodes."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Microsoft Mock testing",
+        "focus": "Tackle sample timed papers designed for Microsoft recruitment tests."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Adobe",
+    "slug": "adobe",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "Multimedia software giant evaluating stack evaluation, monotonic structures, and binary search ranges.",
+    "tier": "TIER_1",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "two-sum",
+      "valid-parentheses"
+    ],
+    "preparationTimeline": "Week 1: Monotonic Stacks & Buffers - Master stack-based lookups, bracket validation, and window maximum limits. | Week 2: BST Properties & Rotations - Practice balance checking, BST validation, and key element predecessor/successor searches. | Week 3: C++ Memory & Pointer Layouts - Review pointer arithmetic, stack/heap allocations, virtual inheritance, and reference structures. | Week 4: Core Utility & System Tools - Design file structure index mappings, custom heap memory managers, and timed mocks.",
+    "interviewProcess": "HackerEarth Coding OA: Automated assessment featuring aptitude, core systems concepts, and 2 medium coding challenges. | Technical Round I (Pointers & Memory): In-depth questioning on heap/stack boundaries, pointer logic, and BST structures. | Technical Round II (Algorithms): Live code whiteboarding on monotonic stack properties, tree nodes, or graphs. | Technical & Managerial Round: Discussion about scalability design, project architecture, and organizational alignment.",
+    "difficultyBreakdown": {
+      "easy": 15,
+      "medium": 55,
+      "hard": 30
+    },
+    "faqs": [
+      {
+        "question": "What coding platforms does Adobe use?",
+        "answer": "Adobe typically hosts its online coding assessments on HackerEarth or CoCubes."
+      },
+      {
+        "question": "What is the typical interview focus at Adobe?",
+        "answer": "Adobe places emphasis on Operating Systems, Memory Management, C/C++ pointers, and classical DSA puzzles (Stack, Heap, BST)."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Adobe MTS Candidate",
+        "rounds": "OA + 3 Tech + HR",
+        "questionsAsked": [
+          "Validate standard BST properties for a tree",
+          "Next Greater Element using Monotonic Stack"
+        ],
+        "difficulty": "Medium",
+        "tips": "Practice explaining memory allocation concepts, pointer arithmetics, and virtual inheritance in C++ if applicable."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 91,
+      "Strings": 89,
+      "Searching": 82,
+      "Dynamic Programming": 79,
+      "Sorting": 72
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Contiguous array bounds",
+        "focus": "Practice scanning segments, array partitioning, and index sums."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Monotonic Stack buffers",
+        "focus": "Master stack bounds, parenthesis validators, and heights tracker."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Tree node traversals",
+        "focus": "Review depth searches, tree balance checks, and paths."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Adobe high-frequency mocks",
+        "focus": "Simulate mocks using last year's Adobe coding sets."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Deloitte",
+    "slug": "deloitte",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "Professional services leader evaluating array manipulations, standard sorting algorithms, and SQL basics.",
+    "tier": "TIER_3",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Hashing"
+    ],
+    "mostAskedQuestions": [
+      "two-sum",
+      "contains-duplicate"
+    ],
+    "preparationTimeline": "Week 1: Array Traversals & Basic Operations - Master scanning elements, duplicates mapping, and integer math checks. | Week 2: String Parsing & Palindromes - Practice clean string reversals, subsequence checking, and char counts. | Week 3: Database & SQL Normalization - Master standard database schemas, write SQL group by statements, and index joins. | Week 4: Analytical Puzzles & Case Prep - Practice structured case studies, resume project walkthroughs, and mock interviews.",
+    "interviewProcess": "Online Assessment: Initial cognitive evaluation, relational database MCQs, and 1 easy coding challenge. | Technical Interview: Reviewing core programming knowledge, SQL joins, database normalization, and coding logic. | final Partner Interview: High-level managerial, behavioral alignment, and consulting case discussions.",
+    "difficultyBreakdown": {
+      "easy": 70,
+      "medium": 25,
+      "hard": 5
+    },
+    "faqs": [
+      {
+        "question": "What is the coding difficulty at Deloitte?",
+        "answer": "Generally Easy to lower-Medium difficulty questions focusing on fundamental math, array manipulations, and string processing."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Deloitte Analyst Candidate",
+        "rounds": "OA + Tech + HR",
+        "questionsAsked": [
+          "Find duplicate elements in an array",
+          "Reverse a string without library functions"
+        ],
+        "difficulty": "Easy",
+        "tips": "Focus on logical programming, solid communication, and detailed resumes."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 90,
+      "Strings": 85,
+      "Searching": 70,
+      "Sorting": 65
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Arrays & Hashing",
+        "focus": "Master core traversals, prime checking, and basic arithmetic logic."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "String Operations",
+        "focus": "Solve character frequency arrays and duplicates detection."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Database Normalization",
+        "focus": "Review standard SQL queries, table locks, and key references."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Consulting Case Mocks",
+        "focus": "Solve basic analytical cases and business logic algorithms."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Flipkart",
+    "slug": "flipkart",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "E-commerce major evaluating advanced tree structures, graph traversals, and dynamic programming.",
+    "tier": "TIER_1",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "two-sum",
+      "contains-duplicate"
+    ],
+    "preparationTimeline": "Week 1: Sliding Window Boundaries - Master sliding window maximums, pointer movements, and index sums. | Week 2: Heaps & Priority Queues - Implement priority trees, solve K-way merges, and heapify arrays. | Week 3: Topological Sorting & DFS - Practice topological graphs, vertices paths, and depth-first searches. | Week 4: Machine Coding & LLD - Review object-oriented programming, design clean class diagrams, and practice timed low-level designs.",
+    "interviewProcess": "Online Assessment: Automated assessment featuring 3 medium-to-hard coding problems on HackerEarth. | Machine Coding Round: Formulate clean, bug-free, low-level class models for a system (e.g. Splitwise) in 2 hours. | Technical Interview I (Algorithmic): Whiteboarding on graphs, dynamic programming, or trees. | HR & Managerial Interview: final cultural fitment, compensation discussions, and organizational matches.",
+    "difficultyBreakdown": {
+      "easy": 20,
+      "medium": 50,
+      "hard": 30
+    },
+    "faqs": [
+      {
+        "question": "What is the typical coding difficulty in Flipkart interviews?",
+        "answer": "Medium to Hard. Focus is heavily on sliding window, heaps, priority queues, graphs, and Dynamic Programming."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Flipkart SDE-1 Candidate",
+        "rounds": "OA + Machine Coding + Tech",
+        "questionsAsked": [
+          "Sliding Window Maximum",
+          "Course Schedule (Topological Sort)"
+        ],
+        "difficulty": "Hard",
+        "tips": "Write modular, extensible code in the Machine Coding round. Follow solid SOLID design principles."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 95,
+      "Strings": 90,
+      "Searching": 85,
+      "Dynamic Programming": 80
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Arrays & Sliding Boundary",
+        "focus": "Solve complex sliding window, prefix metrics, and key lookups."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Priority Queues & Heaps",
+        "focus": "Master priority queues, heap sorting, and dynamic priority streams."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Topological Graphs",
+        "focus": "Practice graph traversals, topological sorting, and shortest pathways."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "Machine Coding & Design",
+        "focus": "Practice low-level design patterns and write clean modular code."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Walmart",
+    "slug": "walmart",
+    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&fit=crop&q=60",
+    "description": "Retail giant assessing efficient heaps, priority queues, advanced arrays, and graphs.",
+    "tier": "TIER_1",
+    "mostAskedTopics": [
+      "Arrays",
+      "Strings",
+      "Sorting & Searching",
+      "Dynamic Programming"
+    ],
+    "mostAskedQuestions": [
+      "two-sum"
+    ],
+    "preparationTimeline": "Week 1: Heaps & Priority Queues - Master complete binary trees, array storage mappings, and K-way merging. | Week 2: Sliding Window Partition - Practice dynamic sliding window boundaries, subarray lookups, and swaps. | Week 3: Subarray Sum Bounds - Solve prefix sum lookups, hash-based array partitionings, and Dynamic Programming. | Week 4: System Architecture & DBMS - Study microservices, transaction locks, relational schemas, and indexing.",
+    "interviewProcess": "Automated Online Assessment: Automated screen containing 2 coding problems primarily on heaps, windows, or DP. | Technical Round I: Live whiteboarding on array segmentation, monotonic stacks, or dynamic algorithms. | Technical Round II: Relational databases, SQL optimizations, class structures, and microservices architecture. | Managerial Fitment Round: Cultural suitability, career progression, and past projects.",
+    "difficultyBreakdown": {
+      "easy": 15,
+      "medium": 55,
+      "hard": 30
+    },
+    "faqs": [
+      {
+        "question": "What is the typical coding difficulty in Walmart interviews?",
+        "answer": "Medium to Hard. Focus is heavily on sliding window, heaps, priority queues, and dynamic programming."
+      }
+    ],
+    "interviewExperiences": [
+      {
+        "title": "Walmart SDE-1 Candidate",
+        "rounds": "OA + 2 Tech + Managerial",
+        "questionsAsked": [
+          "Merge intervals recursively",
+          "Next Greater Element using Monotonic Stack"
+        ],
+        "difficulty": "Medium",
+        "tips": "Focus on array, string, and tree structures. They place high value on clean, optimized code."
+      }
+    ],
+    "topicWeightages": {
+      "Arrays": 93,
+      "Strings": 91,
+      "Searching": 84,
+      "Dynamic Programming": 78
+    },
+    "companyRoadmap": [
+      {
+        "weekNumber": 1,
+        "topics": "Contiguous arrays",
+        "focus": "Solve subarray modifications, key frequency tracking, and swaps."
+      },
+      {
+        "weekNumber": 2,
+        "topics": "Priority Queues & Heaps",
+        "focus": "Practice priority queues, heap sorting, and dynamic priority streams."
+      },
+      {
+        "weekNumber": 3,
+        "topics": "Dynamic Programming",
+        "focus": "Formulate dynamic state spaces and bottom-up matrices logic."
+      },
+      {
+        "weekNumber": 4,
+        "topics": "System Architecture",
+        "focus": "Study microservices, transaction locks, and relational schemas."
+      }
+    ]
+  }
+]

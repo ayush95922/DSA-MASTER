@@ -1,0 +1,94 @@
+# ============================================================
+# DSAverse Development Profile - H2 In-Memory Database
+# Run with: mvn spring-boot:run -Dspring-boot.run.profiles=dev
+# ============================================================
+
+spring:
+  # ==================== H2 Database ====================
+  datasource:
+    url: jdbc:h2:file:./data/dsaverse;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+        default_batch_fetch_size: 20
+
+  # ==================== Disable Flyway ====================
+  flyway:
+    enabled: false
+
+  # ==================== Disable Redis ====================
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 5000
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+      - org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
+
+  # ==================== Mail (no-op) ====================
+  mail:
+    host: localhost
+    port: 1025
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+
+  # ==================== Jackson ====================
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: non_null
+    time-zone: UTC
+
+# ==================== Server ====================
+server:
+  port: 8080
+
+# ==================== Application Properties ====================
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+    access-token-expiration-ms: 900000
+    refresh-token-expiration-ms: 604800000
+
+  cors:
+    allowed-origins: http://localhost:3000
+
+  mail:
+    from: noreply@dsaverse.com
+    base-url: http://localhost:3000
+
+  gemini:
+    api-key: ${GEMINI_API_KEY}
+
+# ==================== Logging ====================
+logging:
+  level:
+    root: INFO
+    com.dsaverse: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG

@@ -1,0 +1,165 @@
+version: '3.8'
+
+services:
+  # ==================== PostgreSQL ====================
+  postgres:
+    image: postgres:16-alpine
+    container_name: dsaverse-postgres
+    environment:
+      POSTGRES_DB: dsaverse
+      POSTGRES_USER: dsaverse
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dsaverse"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - dsaverse-network
+
+  # ==================== Redis ====================
+  redis:
+    image: redis:7-alpine
+    container_name: dsaverse-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - dsaverse-network
+
+  # ==================== Elasticsearch ====================
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+    container_name: dsaverse-elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - dsaverse-network
+
+  # ==================== RabbitMQ ====================
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: dsaverse-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: dsaverse
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - dsaverse-network
+
+  # ==================== MailHog (Dev Email) ====================
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: dsaverse-mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - dsaverse-network
+
+  # ==================== Spring Boot Backend ====================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: dsaverse-backend
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/dsaverse
+      - SPRING_DATASOURCE_USERNAME=dsaverse
+      - SPRING_DATASOURCE_PASSWORD=${POSTGRES_PASSWORD}
+      - SPRING_DATA_REDIS_HOST=redis
+      - SPRING_DATA_REDIS_PORT=6379
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=dsaverse
+      - SPRING_RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
+      - SPRING_ELASTICSEARCH_URIS=http://elasticsearch:9200
+      - SPRING_MAIL_HOST=mailhog
+      - SPRING_MAIL_PORT=1025
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - dsaverse-network
+
+  # ==================== Next.js Frontend ====================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: dsaverse-frontend
+    restart: always
+    environment:
+      - PORT=3000
+      - NEXT_PUBLIC_API_URL=/api
+    depends_on:
+      - backend
+    networks:
+      - dsaverse-network
+
+  # ==================== Nginx Reverse Proxy ====================
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: dsaverse-nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./infra/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - dsaverse-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  elasticsearch_data:
+  rabbitmq_data:
+
+networks:
+  dsaverse-network:
+    driver: bridge

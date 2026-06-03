@@ -1,0 +1,1389 @@
+[
+  {
+    "id": 1,
+    "name": "Basics",
+    "slug": "basics",
+    "description": "Master all fundamental and advanced modules in Basics.",
+    "topics": [
+      {
+        "id": 1,
+        "name": "Programming Basics",
+        "slug": "programming-basics",
+        "description": "Start with variables, conditions, loops, and basic memory concepts.",
+        "theory": {
+          "overview": "Programming Basics is the entry gateway to computer science, detailing variables, conditions, loops, recursion call stacks, and basic memory layout.",
+          "complexityAnalysis": "### Computational Complexities\n- **Time Complexity:** $O(1)$ for variable declarations and basic arithmetic.\n- **Space Complexity:** $O(1)$ auxiliary stack memory for primitive data allocation.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Introduction\nVariables are named storage slots in RAM, while datatypes define what kind of bits can be stored (integers, characters, floating points, pointers).\n\n### Real-world Analogy\nThink of variables as labeled plastic boxes in a moving truck. The datatype defines the box size (a small shoebox for an integer, or a massive container box for a custom object array).",
+              "order": 1
+            },
+            {
+              "title": "2. Visual Memory Layout",
+              "content": "```text\n[ Stack Frame ] ---------> [ Heap Memory Allocation ]\n  int x = 42                 (Allocated dynamically via new)\n  int* ptr = &heapObj ------> [ Heap Object: { id: 1 } ]\n```\nPrimitives reside on the Stack, while dynamic structures are allocated in the Heap and referenced via pointers.",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Integer Overflow:** Attempting to store value > $2^{31}-1$ in a standard 32-bit signed integer.\n2. **Dangling Pointers:** Accessing pointer addresses that have been deallocated from the heap.\n\n### Interview Key Notes\n- Always mention integer bounds and signed/unsigned details.\n- Highlight the difference between pass-by-value and pass-by-reference.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Cheat Sheet\n- Max Signed 32-bit Int: $2,147,483,647$ (approx $2 \\times 10^9$)\n- Min Signed 32-bit Int: $-2,147,483,648$\n\n### Checklist\n- [x] Primitive types memory sizes traced\n- [x] Pointer reference mechanics understood\n- [x] Basic iteration loops verified",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Variables and Datatypes",
+            "slug": "programming-basics-variables-and-datatypes",
+            "description": "Deep-dive tutorial guide on Variables and Datatypes within Programming Basics."
+          },
+          {
+            "name": "Conditionals",
+            "slug": "programming-basics-conditionals",
+            "description": "Deep-dive tutorial guide on Conditionals within Programming Basics."
+          },
+          {
+            "name": "Loops and Iterations",
+            "slug": "programming-basics-loops-and-iterations",
+            "description": "Deep-dive tutorial guide on Loops and Iterations within Programming Basics."
+          },
+          {
+            "name": "Functions and Call Stacks",
+            "slug": "programming-basics-functions-and-call-stacks",
+            "description": "Deep-dive tutorial guide on Functions and Call Stacks within Programming Basics."
+          },
+          {
+            "name": "Memory Pointers",
+            "slug": "programming-basics-memory-pointers",
+            "description": "Deep-dive tutorial guide on Memory Pointers within Programming Basics."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Linear Data Structures",
+    "slug": "linear-data-structures",
+    "description": "Master all fundamental and advanced modules in Linear Data Structures.",
+    "topics": [
+      {
+        "id": 2,
+        "name": "Arrays",
+        "slug": "arrays",
+        "description": "Contiguous memory structures, multi-dimensional grids, and scan optimizations.",
+        "theory": {
+          "overview": "Static and Dynamic Arrays are contiguous chunks of memory storing elements of the same type, supporting constant-time index access.",
+          "complexityAnalysis": "### Computational Complexities\n- **Access Time:** $O(1)$ since address = base + index * element_size.\n- **Insertion/Deletion (Middle):** $O(N)$ due to shifting elements.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Introduction\nAn array represents a contiguous list of elements. Supporting constant time access, arrays are the fundamental block for advanced linear grids and sliding boundaries.\n\n### Real-world Analogy\nThink of a set of contiguous theater seats. If you know seat number 5, you walk directly to it in $O(1)$ time. But if someone enters in seat 1, everyone else has to move one seat to the right ($O(N)$ shifting).",
+              "order": 1
+            },
+            {
+              "title": "2. Visual Array Shift",
+              "content": "```text\nInitial:  [ 10 | 20 | 30 | 40 | -- ]\nInsert 15 at idx 1:\nShift:    [ 10 | -- | 20 | 30 | 40 ] (elements shifted right)\nResult:   [ 10 | 15 | 20 | 30 | 40 ]\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Index Out of Bounds:** Off-by-one errors where loops go from $0$ to $N$ instead of $N-1$.\n2. **Static vs Dynamic Array Resize:** Forgetting that dynamic arrays (ArrayList/Vector) double capacity ($O(N)$ amortized resize) when full.\n\n### Interview Key Notes\n- Always ask: \"Is the array sorted?\" (Binary Search is immediately applicable if yes).\n- Mention in-place swaps to save space complexity ($O(1)$ space).",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Formula Sheets",
+              "content": "### Formulas\n- Range Prefix Sum: $Sum(i, j) = Prefix[j] - Prefix[i-1]$\n- Amortized append time for dynamic arrays: $O(1)$\n\n### Checklist\n- [x] Two-pointers technique practiced\n- [x] Sliding window boundaries managed\n- [x] Static vs dynamic structures compared",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Static Arrays",
+            "slug": "arrays-static-arrays",
+            "description": "Deep-dive tutorial guide on Static Arrays within Arrays."
+          },
+          {
+            "name": "Dynamic Arrays",
+            "slug": "arrays-dynamic-arrays",
+            "description": "Deep-dive tutorial guide on Dynamic Arrays within Arrays."
+          },
+          {
+            "name": "Two Pointers Technique",
+            "slug": "arrays-two-pointers-technique",
+            "description": "Deep-dive tutorial guide on Two Pointers Technique within Arrays."
+          },
+          {
+            "name": "Sliding Window",
+            "slug": "arrays-sliding-window",
+            "description": "Deep-dive tutorial guide on Sliding Window within Arrays."
+          },
+          {
+            "name": "Prefix Sum Arrays",
+            "slug": "arrays-prefix-sum-arrays",
+            "description": "Deep-dive tutorial guide on Prefix Sum Arrays within Arrays."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Strings",
+        "slug": "strings",
+        "description": "Text processing, pattern matching algorithms, and regex operations.",
+        "theory": {
+          "overview": "Strings are immutable (Java/C#) or mutable (C++) sequences of characters, presenting unique operations like substrings, anagram checks, and regex parsing.",
+          "complexityAnalysis": "### Computational Complexities\n- **Concatenation (Immutable):** $O(N + M)$ as it copies both buffers.\n- **Substring Search (KMP):** $O(N + M)$ time complexity.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Introduction\nText processing and pattern searching are standard blocks in real apps. Managing character sequences efficiently requires prefix tables (KMP) or rolling hashes (Rabin-Karp).\n\n### Real-world Analogy\nThink of a dictionary book search. Finding a keyword manually involves scanning characters word-by-word, but using prefix tables is like bookmarking repeating syllables to jump ahead.",
+              "order": 1
+            },
+            {
+              "title": "2. KMP prefix lookup",
+              "content": "```text\nPattern:  A B A C A B A\nLPS Table:[0 0 1 0 1 2 3]\nThis LPS table allows skipping matching segments instead of starting over upon mismatch.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **String Concat in Loops:** Using `str += char` in Java/JS in a loop runs in $O(N^2)$ due to immutability. Use `StringBuilder` instead.\n2. **Charset Bounds:** Assuming ASCII (128/256 chars) when strings contain Unicode UTF-8 multi-byte glyphs.\n\n### Interview Key Notes\n- Always mention `StringBuilder` or mutable buffers to save memory.\n- Demonstrate KMP or Rabin-Karp prefix jumps for substring search.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Formulas",
+              "content": "### Key formulas\n- Rolling Hash: $Hash(S) = \\sum S[i] \\times p^{N-1-i} \\pmod m$\n- String Builder append complexity: $O(1)$ amortized\n\n### Checklist\n- [x] Anagram frequency array lookup practiced\n- [x] Palindrome boundary loops validated",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "String Immersion",
+            "slug": "strings-string-immersion",
+            "description": "Deep-dive tutorial guide on String Immersion within Strings."
+          },
+          {
+            "name": "Anagrams and Palindromes",
+            "slug": "strings-anagrams-and-palindromes",
+            "description": "Deep-dive tutorial guide on Anagrams and Palindromes within Strings."
+          },
+          {
+            "name": "Pattern Matching (KMP)",
+            "slug": "strings-pattern-matching-kmp-",
+            "description": "Deep-dive tutorial guide on Pattern Matching (KMP) within Strings."
+          },
+          {
+            "name": "Rabin-Karp Rolling Hash",
+            "slug": "strings-rabin-karp-rolling-hash",
+            "description": "Deep-dive tutorial guide on Rabin-Karp Rolling Hash within Strings."
+          },
+          {
+            "name": "String Compression",
+            "slug": "strings-string-compression",
+            "description": "Deep-dive tutorial guide on String Compression within Strings."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Hashing",
+        "slug": "hashing",
+        "description": "Key-value mappings, collision resolutions, and hash table designs.",
+        "theory": {
+          "overview": "Hash Tables map keys to values using mathematical hash functions, enabling average constant-time insertions, deletions, and lookups.",
+          "complexityAnalysis": "### Computational Complexities\n- **Average Lookup:** $O(1)$\n- **Worst Case Lookup (All Collisions):** $O(N)$",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nHash Maps allow mapping custom key objects directly to value pointers by computing a hash integer modulo bucket size. Collisions are handled via Chaining (linked lists/trees) or Open Addressing (probing).\n\n### Real-world Analogy\nThink of a mailroom with pigeonholes sorted by the first letter of your last name. Instead of sorting through thousands of letters, the clerk walks straight to the letter \"S\" slot ($O(1)$ lookup) and scans the small stack inside.",
+              "order": 1
+            },
+            {
+              "title": "2. Collision Resolution",
+              "content": "```text\n[Hash(Key)] ---> Bucket idx [2] ---> [ Node A ] ---> [ Node B ] ---> NULL\nThis chaining model prevents data loss when two distinct keys hash to the same bucket index.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Unpredictable Hash Functions:** Forgetting that custom class keys MUST implement both `equals()` and `hashCode()` to avoid lost values.\n2. **Load Factor Ignored:** Letting buckets fill up without rehashing, degrading performance to $O(N)$.\n\n### Interview Key Notes\n- Explain Load Factor (default 0.75) and rehashing ($2 \\times$ bucket size).\n- Mention the difference between HashMap ($O(1)$ average) and TreeMap ($O(\\log N)$ sorted BST).",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Formulas\n- Load Factor $\\alpha = N / M$ (keep below 0.75)\n- Worst Case bucket degradation: $O(N)$ (or $O(\\log N)$ in Java 8 TreeMap conversion)\n\n### Checklist\n- [x] Chaining vs Open Addressing compared\n- [x] Custom hashCode/equals verified",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Direct Address Tables",
+            "slug": "hashing-direct-address-tables",
+            "description": "Deep-dive tutorial guide on Direct Address Tables within Hashing."
+          },
+          {
+            "name": "Chaining Collision Method",
+            "slug": "hashing-chaining-collision-method",
+            "description": "Deep-dive tutorial guide on Chaining Collision Method within Hashing."
+          },
+          {
+            "name": "Open Addressing",
+            "slug": "hashing-open-addressing",
+            "description": "Deep-dive tutorial guide on Open Addressing within Hashing."
+          },
+          {
+            "name": "Consistent Hashing",
+            "slug": "hashing-consistent-hashing",
+            "description": "Deep-dive tutorial guide on Consistent Hashing within Hashing."
+          },
+          {
+            "name": "LRU Cache Hash Maps",
+            "slug": "hashing-lru-cache-hash-maps",
+            "description": "Deep-dive tutorial guide on LRU Cache Hash Maps within Hashing."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Linked List",
+        "slug": "linked-list",
+        "description": "Dynamic pointer-based dynamic data lists (Singly, Doubly, Circular).",
+        "theory": {
+          "overview": "Linked Lists are pointer-based nodes scattered across memory, avoiding contiguous reservation blocks and supporting dynamic resize.",
+          "complexityAnalysis": "### Computational Complexities\n- **Traversal:** $O(N)$ time.\n- **Prepend/Insert (knowing location):** $O(1)$ constant time.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nLinked Lists consist of nodes containing a data element and a pointer reference to the next node. They support quick insertions/deletions without shifting memory arrays.\n\n### Real-world Analogy\nThink of a treasure hunt game. The first clue tells you where to find the second clue. The second clue tells you where to find the third clue. If you want to insert a new clue in the middle, you just rewrite the pointer address on clue A to point to the new clue.",
+              "order": 1
+            },
+            {
+              "title": "2. Pointer manipulation",
+              "content": "```text\nNode A [ Data | Next ] ---------> Node B [ Data | Next ]\nInsert Node C in between:\nNode A [ Next ] ---> Node C [ Next ] ---> Node B\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **NullPointerExceptions:** Dereferencing `node.next` when `node` is null.\n2. **Lost Head Reference:** Modifying the root head pointer directly, losing track of the starting node. Use a dummy node!\n\n### Interview Key Notes\n- Always mention the \"Dummy Node\" technique for clean code.\n- Suggest Floyd's Cycle Detection (Fast & Slow pointers) for cycle searches.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Formulas",
+              "content": "### Floyd's Cycle\n- Fast pointer moves 2 steps, Slow pointer moves 1 step. If they meet, a cycle exists.\n\n### Checklist\n- [x] Dummy node used for head safety\n- [x] Slow/fast pointers evaluated",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Singly Linked List",
+            "slug": "linked-list-singly-linked-list",
+            "description": "Deep-dive tutorial guide on Singly Linked List within Linked List."
+          },
+          {
+            "name": "Doubly Linked List",
+            "slug": "linked-list-doubly-linked-list",
+            "description": "Deep-dive tutorial guide on Doubly Linked List within Linked List."
+          },
+          {
+            "name": "Circular Linked List",
+            "slug": "linked-list-circular-linked-list",
+            "description": "Deep-dive tutorial guide on Circular Linked List within Linked List."
+          },
+          {
+            "name": "Floyd's Cycle Finding",
+            "slug": "linked-list-floyd-s-cycle-finding",
+            "description": "Deep-dive tutorial guide on Floyd's Cycle Finding within Linked List."
+          },
+          {
+            "name": "Reverse Linked Lists",
+            "slug": "linked-list-reverse-linked-lists",
+            "description": "Deep-dive tutorial guide on Reverse Linked Lists within Linked List."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Stack",
+        "slug": "stack",
+        "description": "Last-In-First-Out stacks, expression parsers, and monotonic logs.",
+        "theory": {
+          "overview": "Stacks are Last-In-First-Out (LIFO) linear lists, storing recursive functions, parentheses validations, and monotonic tracks.",
+          "complexityAnalysis": "### Computational Complexities\n- **Push / Pop / Peek:** $O(1)$ constant time.\n- **Search:** $O(N)$ time.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nStacks restrict insertions and deletions to a single boundary (top). The last element pushed is the first to be popped. Monotonic stacks keep elements sorted to find next greater elements.\n\n### Real-world Analogy\nThink of a stack of clean plates in a kitchen cupboard. You place new plates on the top of the stack, and you retrieve plates from the top of the stack. You never pull a plate from the bottom.",
+              "order": 1
+            },
+            {
+              "title": "2. Monotonic Stack Track",
+              "content": "```text\nPushing 4 into Decreasing Stack [ 10 | 8 | 5 ]:\nPop 5 since 4 < 5. Result: [ 10 | 8 | 4 ]\nThis keeps elements in sorted order to resolve ranges efficiently.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Stack Underflow:** Calling `.pop()` or `.peek()` on an empty stack.\n2. **Monotonic Pops:** Forgetting to pop smaller elements inside loops, degrading search down to $O(N^2)$.\n\n### Interview Key Notes\n- Always check if the stack is empty before popping.\n- Highlight monotonic stacks for \"Next Greater Element\" problems.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Monotonic Stack Pattern\n```java\nwhile (!stack.isEmpty() && stack.peek() < current) {\n    stack.pop();\n}\nstack.push(current);\n```\n\n### Checklist\n- [x] Parentheses validators tested\n- [x] Monotonic limits checked",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Stack Using Arrays",
+            "slug": "stack-stack-using-arrays",
+            "description": "Deep-dive tutorial guide on Stack Using Arrays within Stack."
+          },
+          {
+            "name": "Expression Evaluation",
+            "slug": "stack-expression-evaluation",
+            "description": "Deep-dive tutorial guide on Expression Evaluation within Stack."
+          },
+          {
+            "name": "Monotonic Stack",
+            "slug": "stack-monotonic-stack",
+            "description": "Deep-dive tutorial guide on Monotonic Stack within Stack."
+          },
+          {
+            "name": "Min Stack Design",
+            "slug": "stack-min-stack-design",
+            "description": "Deep-dive tutorial guide on Min Stack Design within Stack."
+          },
+          {
+            "name": "Valid Parentheses Validator",
+            "slug": "stack-valid-parentheses-validator",
+            "description": "Deep-dive tutorial guide on Valid Parentheses Validator within Stack."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Queue",
+        "slug": "queue",
+        "description": "First-In-First-Out queues, double-ended deques, and buffer streams.",
+        "theory": {
+          "overview": "Queues are First-In-First-Out (FIFO) linear buffers, handling async task execution, scheduler rings, and BFS sweeps.",
+          "complexityAnalysis": "### Computational Complexities\n- **Enqueue / Dequeue:** $O(1)$ constant time.\n- **Search:** $O(N)$ time.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nQueues restrict insertions to the back (tail) and deletions to the front (head). Deques (double-ended queues) support insertions and deletions on both boundaries.\n\n### Real-world Analogy\nThink of a line of customers at an airport checkout counter. The first customer who gets in line is the first one served and checked out (First-In-First-Out).",
+              "order": 1
+            },
+            {
+              "title": "2. Deque Operations",
+              "content": "```text\n[ Back Insertion ] ===> [ Head Dequeue ]\nDouble ended deques support pushes and pops on both ends.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Linear Array Queues:** Implementing a queue in a standard array without circle wrapping causes space waste. Use circular array indexing.\n2. **Multi-thread Safety:** Forgetting that standard queues are not thread-safe. Use `ConcurrentLinkedQueue` in production.\n\n### Interview Key Notes\n- Discuss the difference between BFS (uses Queue) and DFS (uses Stack).\n- Highlight deques for sliding window maximum ranges.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Circular Indexing\n- `nextIndex = (currentIndex + 1) % arrayLength`\n\n### Checklist\n- [x] Circular wraps validated\n- [x] Deque sliding boundaries managed",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Queue Design",
+            "slug": "queue-queue-design",
+            "description": "Deep-dive tutorial guide on Queue Design within Queue."
+          },
+          {
+            "name": "Circular Queues",
+            "slug": "queue-circular-queues",
+            "description": "Deep-dive tutorial guide on Circular Queues within Queue."
+          },
+          {
+            "name": "Deques",
+            "slug": "queue-deques",
+            "description": "Deep-dive tutorial guide on Deques within Queue."
+          },
+          {
+            "name": "Sliding Window Maximum",
+            "slug": "queue-sliding-window-maximum",
+            "description": "Deep-dive tutorial guide on Sliding Window Maximum within Queue."
+          },
+          {
+            "name": "Task Buffers",
+            "slug": "queue-task-buffers",
+            "description": "Deep-dive tutorial guide on Task Buffers within Queue."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Heap",
+        "slug": "heap",
+        "description": "Binary max/min heaps, complete binary trees, and priorities.",
+        "theory": {
+          "overview": "Binary Heaps are complete binary trees mapped to linear arrays, maintaining max/min priorities in logarithmic time.",
+          "complexityAnalysis": "### Computational Complexities\n- **Insert / Extract Min:** $O(\\log N)$ time.\n- **Get Min/Max:** $O(1)$ constant time.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nBinary Heaps satisfy the heap invariant: every parent node has a value smaller than or equal to its children (Min Heap). The array structure maps indexes: `left = 2*i + 1`, `right = 2*i + 2`.\n\n### Real-world Analogy\nThink of a corporate chain of command. The CEO has the ultimate authority (highest priority). If the CEO leaves, the most senior vice president is promoted, keeping the priority chain intact.",
+              "order": 1
+            },
+            {
+              "title": "2. Array Mapping",
+              "content": "```text\nNode Index: [0] -> CEO, Children at [1] and [2].\nThis array mapping avoids pointers completely, saving heap memory.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Poor Heapify:** Building a heap node-by-node in $O(N \\log N)$ instead of bottom-up heapify in $O(N)$.\n2. **Slow Updates:** Searching for a middle key in a heap takes $O(N)$ time. Heaps are not search trees.\n\n### Interview Key Notes\n- Always mention that heap building takes $O(N)$ time via bottom-up heapify.\n- Explain how array indexes map cleanly to tree nodes.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Formulas",
+              "content": "### Index Mapping Formulas\n- `parent = (i - 1) / 2`\n- `leftChild = 2*i + 1`, `rightChild = 2*i + 2`\n\n### Checklist\n- [x] Heapify algorithm implemented\n- [x] Min vs Max heaps compared",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Min Heap properties",
+            "slug": "heap-min-heap-properties",
+            "description": "Deep-dive tutorial guide on Min Heap properties within Heap."
+          },
+          {
+            "name": "Max Heap properties",
+            "slug": "heap-max-heap-properties",
+            "description": "Deep-dive tutorial guide on Max Heap properties within Heap."
+          },
+          {
+            "name": "Heapify Algorithm",
+            "slug": "heap-heapify-algorithm",
+            "description": "Deep-dive tutorial guide on Heapify Algorithm within Heap."
+          },
+          {
+            "name": "HeapSort Implementation",
+            "slug": "heap-heapsort-implementation",
+            "description": "Deep-dive tutorial guide on HeapSort Implementation within Heap."
+          },
+          {
+            "name": "K-Way Merges",
+            "slug": "heap-k-way-merges",
+            "description": "Deep-dive tutorial guide on K-Way Merges within Heap."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Priority Queue",
+        "slug": "priority-queue",
+        "description": "Prioritized item processing queues and scheduler buffers.",
+        "theory": {
+          "overview": "Priority Queues are abstract schedules where items are dequeued based on their priority, rather than insertion sequence.",
+          "complexityAnalysis": "### Computational Complexities\n- **Enqueue / Dequeue:** $O(\\log N)$ time.\n- **Peek Priority:** $O(1)$ time.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nPriority Queues extend heaps by storing complex objects with customizable comparators. They are standard building blocks for Dijkstra's scheduler or Huffman coding.\n\n### Real-world Analogy\nThink of an emergency room in a hospital. Patients do not get treated in the order they arrived. A patient with a severe injury is treated immediately, bypassing others who arrived earlier.",
+              "order": 1
+            },
+            {
+              "title": "2. Priority Scheduler",
+              "content": "```text\nIncoming: [ Patient A (Cold) ] ---> [ Patient B (Stroke) ]\nPriority Queue swaps B to front based on urgency value.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Unstable Ordering:** Assuming priority queues preserve insertion order for objects with equal priorities.\n2. **Slow Updates:** Changing an object's priority key while it is inside the queue. You must remove it first, then re-insert.\n\n### Interview Key Notes\n- Write clean comparator logic using lambda functions.\n- Highlight priority queues for K-way merge problems.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Comparator Formula (Java)\n```java\nPriorityQueue<Node> pq = new PriorityQueue<>((a, b) -> a.val - b.val);\n```\n\n### Checklist\n- [x] Lamda comparators tested\n- [x] Dijkstra scheduling applications validated",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Priority Queue Basics",
+            "slug": "priority-queue-priority-queue-basics",
+            "description": "Deep-dive tutorial guide on Priority Queue Basics within Priority Queue."
+          },
+          {
+            "name": "Task Scheduling Queue",
+            "slug": "priority-queue-task-scheduling-queue",
+            "description": "Deep-dive tutorial guide on Task Scheduling Queue within Priority Queue."
+          },
+          {
+            "name": "Median in Data Stream",
+            "slug": "priority-queue-median-in-data-stream",
+            "description": "Deep-dive tutorial guide on Median in Data Stream within Priority Queue."
+          },
+          {
+            "name": "Dijkstra Scheduler",
+            "slug": "priority-queue-dijkstra-scheduler",
+            "description": "Deep-dive tutorial guide on Dijkstra Scheduler within Priority Queue."
+          },
+          {
+            "name": "Prototypical queues",
+            "slug": "priority-queue-prototypical-queues",
+            "description": "Deep-dive tutorial guide on Prototypical queues within Priority Queue."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Algorithms",
+    "slug": "algorithms",
+    "description": "Master all fundamental and advanced modules in Algorithms.",
+    "topics": [
+      {
+        "id": 5,
+        "name": "Searching",
+        "slug": "searching",
+        "description": "Binary search on sorted lines, search space reduction, and array peaks.",
+        "theory": {
+          "overview": "Searching covers algorithms to find specific keys in sorted arrays (Binary Search) or graph layouts (DFS/BFS).",
+          "complexityAnalysis": "### Computational Complexities\n- **Linear Search:** $O(N)$ time, $O(1)$ space.\n- **Binary Search:** $O(\\log N)$ time, $O(1)$ space.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nBinary Search represents one of the most powerful paradigms: dividing the search boundaries in half at every step. This reduces lookup time dramatically.\n\n### Real-world Analogy\nThink of searching for a word in a printed dictionary. You do not read page-by-page. You split the book in the middle. If the word is alphabetically smaller, you ignore the right half and repeat on the left half.",
+              "order": 1
+            },
+            {
+              "title": "2. Binary Search Split",
+              "content": "```text\n[ Left ] ---------------> [ Mid ] ---------------> [ Right ]\n   If target > Mid:  Left = Mid + 1 (eliminate left half)\n   If target < Mid:  Right = Mid - 1 (eliminate right half)\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Integer Overflow in Mid calculation:** Using `mid = (left + right) / 2` can overflow. Use `mid = left + (right - left) / 2`.\n2. **Unsorted Inputs:** Using Binary Search on unsorted sequences without sorting first.\n\n### Interview Key Notes\n- Always highlight the $O(\\log N)$ bounds.\n- Mention \"Binary Search on Answer\" when the search space is monotonic (e.g. Koko Eating Bananas).",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Formulas",
+              "content": "### Mid Formula\n- `mid = left + (right - left) / 2`\n\n### Checklist\n- [x] Search bounds verified\n- [x] Terminating boundary conditions tested (L <= R)",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Linear Search",
+            "slug": "searching-linear-search",
+            "description": "Deep-dive tutorial guide on Linear Search within Searching."
+          },
+          {
+            "name": "Binary Search Basics",
+            "slug": "searching-binary-search-basics",
+            "description": "Deep-dive tutorial guide on Binary Search Basics within Searching."
+          },
+          {
+            "name": "Search Space Division",
+            "slug": "searching-search-space-division",
+            "description": "Deep-dive tutorial guide on Search Space Division within Searching."
+          },
+          {
+            "name": "Binary Search on Answer",
+            "slug": "searching-binary-search-on-answer",
+            "description": "Deep-dive tutorial guide on Binary Search on Answer within Searching."
+          },
+          {
+            "name": "Peak Finding",
+            "slug": "searching-peak-finding",
+            "description": "Deep-dive tutorial guide on Peak Finding within Searching."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Sorting",
+        "slug": "sorting",
+        "description": "Master QuickSort, MergeSort, HeapSort, and linear counting algorithms.",
+        "theory": {
+          "overview": "Sorting reorders arrays alphabetically or numerically, covering MergeSort, QuickSort, and HeapSort.",
+          "complexityAnalysis": "### Computational Complexities\n- **Merge Sort:** $O(N \\log N)$ time, $O(N)$ auxiliary space.\n- **Quick Sort:** $O(N \\log N)$ average, $O(N^2)$ worst case, $O(\\log N)$ stack space.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nSorting algorithms rearrange arrays systematically. Divide and Conquer sorting (MergeSort) splits arrays, sorts sub-segments recursively, and merges them.\n\n### Real-world Analogy\nThink of organizing an unsorted deck of cards. You can split the deck into two piles, ask two friends to organize their respective piles, and then combine the two sorted piles by picking the smallest card from the top.",
+              "order": 1
+            },
+            {
+              "title": "2. Merge Process",
+              "content": "```text\nSorted Left: [ 2 | 5 ]      Sorted Right: [ 1 | 8 ]\nMerge pointers: p1 points to 2, p2 points to 1.\nChoose 1. Result: [ 1 ]\nChoose 2. Result: [ 1 | 2 ] ... continue.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Unstable Sorts:** Forgetting that algorithms like QuickSort do not guarantee preserving the original relative order of equal keys.\n2. **Recursive Stack Overflow:** Forgetting recursion depth boundaries on massive arrays.\n\n### Interview Key Notes\n- Explain the stability property of sorting.\n- Discuss space trade-offs between MergeSort ($O(N)$ space) and QuickSort ($O(1)$ auxiliary space).",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Complexity Sheet\n- MergeSort: $O(N \\log N)$ in all cases\n- QuickSort: $O(N \\log N)$ average, $O(N^2)$ if pivots are poorly chosen\n\n### Checklist\n- [x] Divide & Conquer understood\n- [x] Stable vs unstable compared",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Bubble and Insertion Sort",
+            "slug": "sorting-bubble-and-insertion-sort",
+            "description": "Deep-dive tutorial guide on Bubble and Insertion Sort within Sorting."
+          },
+          {
+            "name": "Merge Sort",
+            "slug": "sorting-merge-sort",
+            "description": "Deep-dive tutorial guide on Merge Sort within Sorting."
+          },
+          {
+            "name": "Quick Sort",
+            "slug": "sorting-quick-sort",
+            "description": "Deep-dive tutorial guide on Quick Sort within Sorting."
+          },
+          {
+            "name": "Heap Sort",
+            "slug": "sorting-heap-sort",
+            "description": "Deep-dive tutorial guide on Heap Sort within Sorting."
+          },
+          {
+            "name": "Non-comparison Counting Sort",
+            "slug": "sorting-non-comparison-counting-sort",
+            "description": "Deep-dive tutorial guide on Non-comparison Counting Sort within Sorting."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Recursion",
+        "slug": "algorithms",
+        "description": "Divide and conquer patterns, backtracks, and recurrence relations.",
+        "theory": {
+          "overview": "Recursion is a design paradigm where a function calls itself to solve smaller instances of the same problem.",
+          "complexityAnalysis": "### Computational Complexities\n- **Time Complexity:** $O(Branch^{Depth})$ depending on recursive branches.\n- **Space Complexity:** $O(Depth)$ recursive call stack frames.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nRecursion breaks complex problems into base cases and recursive steps. Every call pushes a stack frame to memory, which is resolved backwards once the base case terminates.\n\n### Real-world Analogy\nThink of Russian nesting dolls. You open a large doll to find a slightly smaller doll inside. You repeat this until you reach the smallest doll which cannot be opened (Base Case). Then you close them all back up.",
+              "order": 1
+            },
+            {
+              "title": "2. Call Stack Trace",
+              "content": "```text\n[ solve(3) ] ---> calls [ solve(2) ] ---> calls [ solve(1) ] (Base Case)\nOnce base case is reached, values return and stack frames are popped.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Stack Overflow:** Missing base cases or updating parameters incorrectly, leading to infinite call loops.\n2. **Redundant Work:** Evaluating identical subproblems multiple times (e.g. recursive Fibonacci). Use memoization instead.\n\n### Interview Key Notes\n- Always write the Base Case first.\n- Draw the recursive call tree to illustrate execution flow.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Formulas\n- Fibonacci: $T(N) = T(N-1) + T(N-2) \\implies O(2^N)$\n- Binary Division: $T(N) = T(N/2) + O(1) \\implies O(\\log N)$\n\n### Checklist\n- [x] Base cases established\n- [x] Memoization caches added where needed",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Basics Introduction",
+            "slug": "algorithms-basics-introduction",
+            "description": "Deep-dive tutorial guide on Basics Introduction within Recursion."
+          },
+          {
+            "name": "Intermediate Tricks",
+            "slug": "algorithms-intermediate-tricks",
+            "description": "Deep-dive tutorial guide on Intermediate Tricks within Recursion."
+          },
+          {
+            "name": "Advanced Analysis",
+            "slug": "algorithms-advanced-analysis",
+            "description": "Deep-dive tutorial guide on Advanced Analysis within Recursion."
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Greedy",
+        "slug": "greedy",
+        "description": "Local optimal choices, interval scheduling, and fractional choices.",
+        "theory": {
+          "overview": "Greedy algorithms make the locally optimal choice at each step, aiming to find a global optimum.",
+          "complexityAnalysis": "### Computational Complexities\n- **Time Complexity:** $O(N \\log N)$ typically due to sorting intervals.\n- **Space Complexity:** $O(1)$ auxiliary space.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nGreedy choice works only if the problem exhibits optimal substructure. At each step, we make the choice that seems best right now without backtracking.\n\n### Real-world Analogy\nThink of giving change using coins (25c, 10c, 5c, 1c). To give 41c change, you greedily pick the largest coin that fits: first 25c (leaving 16c), then 10c (leaving 6c), then 5c (leaving 1c), then 1c. Total: 4 coins.",
+              "order": 1
+            },
+            {
+              "title": "2. Greedy Interval Selection",
+              "content": "```text\nSort intervals by end times:\n[ Interval A: 1 - 3 ] ---> Picked\n[ Interval B: 2 - 4 ] ---> Rejected (overlaps with A)\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Choosing Greedy without Proof:** Assuming greedy works when dynamic programming is required (e.g. general coin change).\n2. **Poor Sort Criteria:** Sorting by start times instead of end times in interval scheduling.\n\n### Interview Key Notes\n- Always state the greedy choice rule clearly.\n- Highlight the sorting step ($O(N \\log N)$ time).",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Interval Scheduling Rule\n- Sort intervals by end time. Pick the next non-overlapping interval.\n\n### Checklist\n- [x] Greedy choice proof verified\n- [x] Interval sorting steps completed",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Fractional Knapsack",
+            "slug": "greedy-fractional-knapsack",
+            "description": "Deep-dive tutorial guide on Fractional Knapsack within Greedy."
+          },
+          {
+            "name": "Interval Scheduling",
+            "slug": "greedy-interval-scheduling",
+            "description": "Deep-dive tutorial guide on Interval Scheduling within Greedy."
+          },
+          {
+            "name": "Job Sequencing",
+            "slug": "greedy-job-sequencing",
+            "description": "Deep-dive tutorial guide on Job Sequencing within Greedy."
+          },
+          {
+            "name": "Huffman Coding",
+            "slug": "greedy-huffman-coding",
+            "description": "Deep-dive tutorial guide on Huffman Coding within Greedy."
+          },
+          {
+            "name": "Gas Station problem",
+            "slug": "greedy-gas-station-problem",
+            "description": "Deep-dive tutorial guide on Gas Station problem within Greedy."
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Backtracking",
+        "slug": "backtracking",
+        "description": "Recursive path finding, state restorations, and game boards.",
+        "theory": {
+          "overview": "Backtracking is a search algorithm that builds candidate solutions incrementally and abandons them as soon as it determines they cannot lead to a valid solution.",
+          "complexityAnalysis": "### Computational Complexities\n- **Time Complexity:** $O(Decision^{Depth})$ exponential time.\n- **Space Complexity:** $O(Depth)$ recursive call stack depth.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nBacktracking systematically searches a decision tree. It adds a choice, recurses, and then REMOVES the choice (backtracks) to restore the state before exploring other paths.\n\n### Real-world Analogy\nThink of solving a maze. You walk down a path. If you hit a dead end, you walk backwards to the previous intersection and try the other direction.",
+              "order": 1
+            },
+            {
+              "title": "2. Backtracking recursion tree",
+              "content": "```text\n           [ Root ]\n          /   |    \\\n       [A]   [B]   [C] (dead end)\n        |     |\n    [Success][Fail] (Backtrack to A)\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **State Leakage:** Forgetting to revert the state change (e.g. not resetting `visited[r][c] = false`), causing other branches to fail.\n2. **Slow Pruning:** Missing early pruning checks, leading to exploring massive dead-end subtrees.\n\n### Interview Key Notes\n- Remember the pattern: **Choose, Explore, Unchoose**.\n- Clearly draw recursion limits and base pruning cases.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Backtracking Template\n```java\nvoid backtrack(State state) {\n    if (isSolution(state)) { save(); return; }\n    for (Choice c : choices) {\n        if (isValid(c)) {\n            make(c);\n            backtrack(state);\n            undo(c); // Backtrack!\n        }\n    }\n}\n```\n\n### Checklist\n- [x] State resets verified\n- [x] Early pruning checks added",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "N-Queens Solver",
+            "slug": "backtracking-n-queens-solver",
+            "description": "Deep-dive tutorial guide on N-Queens Solver within Backtracking."
+          },
+          {
+            "name": "Sudoku Solver",
+            "slug": "backtracking-sudoku-solver",
+            "description": "Deep-dive tutorial guide on Sudoku Solver within Backtracking."
+          },
+          {
+            "name": "Subsets and Permutations",
+            "slug": "backtracking-subsets-and-permutations",
+            "description": "Deep-dive tutorial guide on Subsets and Permutations within Backtracking."
+          },
+          {
+            "name": "Word Search",
+            "slug": "backtracking-word-search",
+            "description": "Deep-dive tutorial guide on Word Search within Backtracking."
+          },
+          {
+            "name": "Hamiltonian Path",
+            "slug": "backtracking-hamiltonian-path",
+            "description": "Deep-dive tutorial guide on Hamiltonian Path within Backtracking."
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Dynamic Programming",
+        "slug": "dynamic-programming",
+        "description": "Overlapping subproblems, state equations, and optimal substructures.",
+        "theory": {
+          "overview": "Dynamic Programming (DP) optimizes recursive splits by storing solved subproblem results in memoization arrays (top-down) or tabulation grids (bottom-up).",
+          "complexityAnalysis": "### Computational Complexities\n- **Memoized Fib:** $O(N)$ time, $O(N)$ space.\n- **LCS Subsequence:** $O(N \\times M)$ time and space.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nDP solves overlapping subproblems that possess optimal substructure. Rather than recalculating identical states, we save them in arrays/matrices to fetch them in $O(1)$ time.\n\n### Real-world Analogy\nThink of calculating $1+1+1+1+1=5$. If I add another \"$+1$\", you do not count from scratch. You remember the previous total was 5, add 1, and immediately say 6. That is Memoization.",
+              "order": 1
+            },
+            {
+              "title": "2. Bottom-up Grid Transition",
+              "content": "```text\nDP Grid [i][j] = DP[i-1][j] + DP[i][j-1] (Unique Paths)\nEach cell is computed using previously completed adjacent results.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Redundant Space:** Allocating a full 2D matrix when only the previous row/column is needed. Use space optimization!\n2. **Poor State Design:** Defining incomplete state parameters, failing to capture all decision factors.\n\n### Interview Key Notes\n- Explain the transition equation (recurrence relation) first.\n- Discuss top-down (memoization) vs bottom-up (tabulation) trade-offs.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Space Optimization Rule\n- If $DP[i][j]$ depends only on $DP[i-1]$, we can reduce the 2D matrix down to a 1D array.\n\n### Checklist\n- [x] Overlapping subproblems identified\n- [x] Recurrence transition verified",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Memoization vs Tabulation",
+            "slug": "dynamic-programming-memoization-vs-tabulation",
+            "description": "Deep-dive tutorial guide on Memoization vs Tabulation within Dynamic Programming."
+          },
+          {
+            "name": "0/1 Knapsack DP",
+            "slug": "dynamic-programming-0-1-knapsack-dp",
+            "description": "Deep-dive tutorial guide on 0/1 Knapsack DP within Dynamic Programming."
+          },
+          {
+            "name": "Longest Common Subsequence",
+            "slug": "dynamic-programming-longest-common-subsequence",
+            "description": "Deep-dive tutorial guide on Longest Common Subsequence within Dynamic Programming."
+          },
+          {
+            "name": "Matrix Chain Multiplication",
+            "slug": "dynamic-programming-matrix-chain-multiplication",
+            "description": "Deep-dive tutorial guide on Matrix Chain Multiplication within Dynamic Programming."
+          },
+          {
+            "name": "DP on Trees",
+            "slug": "dynamic-programming-dp-on-trees",
+            "description": "Deep-dive tutorial guide on DP on Trees within Dynamic Programming."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Hierarchical Data Structures",
+    "slug": "hierarchical-data-structures",
+    "description": "Master all fundamental and advanced modules in Hierarchical Data Structures.",
+    "topics": [
+      {
+        "id": 13,
+        "name": "Tree",
+        "slug": "tree",
+        "description": "Hierarchical binary trees, pre/in/post-order traversals, and properties.",
+        "theory": {
+          "overview": "Binary Trees are hierarchical structures where each node has at most two children, forming the foundation of DFS and BST paths.",
+          "complexityAnalysis": "### Computational Complexities\n- **Traversal (DFS/BFS):** $O(N)$ time.\n- **Height Balance Lookup:** $O(H)$ where $H$ is the tree height.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nBinary Trees consist of root heads referencing left and right child pointers recursively. DFS traverses paths deep down via stacks, while BFS sweeps level-by-level using queues.\n\n### Real-world Analogy\nThink of a family tree starting with an ancestor (Root). The ancestor has children, who have their own children (Subtrees). Traversing a tree is like walking down the generations.",
+              "order": 1
+            },
+            {
+              "title": "2. DFS vs BFS sweeps",
+              "content": "```text\n          [ Root ]\n          /      \\\n     [ Left ]  [ Right ]\n  DFS: Root -> Left -> Right (Stack)\n  BFS: Root -> (Left, Right) (Queue)\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Null Pointers:** Forgetting to check if the current node is null inside base cases, leading to crashes.\n2. **Unbalanced Depth:** Assuming height is always $\\log N$. A skew tree behaves like a linked list with $O(N)$ height.\n\n### Interview Key Notes\n- Always write recursive base cases first: `if (root == null) return;`.\n- Demonstrate height balances clearly using post-order DFS traversals.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Height Formula\n- `height = 1 + Math.max(height(left), height(right))`\n\n### Checklist\n- [x] In-order, Pre-order, Post-order traversal understood\n- [x] Level-order (BFS) queues implemented",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Binary Trees",
+            "slug": "tree-binary-trees",
+            "description": "Deep-dive tutorial guide on Binary Trees within Tree."
+          },
+          {
+            "name": "Tree Traversals (BFS/DFS)",
+            "slug": "tree-tree-traversals-bfs-dfs-",
+            "description": "Deep-dive tutorial guide on Tree Traversals (BFS/DFS) within Tree."
+          },
+          {
+            "name": "Height and Depth Analysis",
+            "slug": "tree-height-and-depth-analysis",
+            "description": "Deep-dive tutorial guide on Height and Depth Analysis within Tree."
+          },
+          {
+            "name": "Lowest Common Ancestor",
+            "slug": "tree-lowest-common-ancestor",
+            "description": "Deep-dive tutorial guide on Lowest Common Ancestor within Tree."
+          },
+          {
+            "name": "Diameter of Tree",
+            "slug": "tree-diameter-of-tree",
+            "description": "Deep-dive tutorial guide on Diameter of Tree within Tree."
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "BST",
+        "slug": "bst",
+        "description": "Binary Search Trees, logarithmic searches, and tree balancer runs.",
+        "theory": {
+          "overview": "Binary Search Trees (BST) satisfy the ordering invariant: left subtree values < parent value < right subtree values.",
+          "complexityAnalysis": "### Computational Complexities\n- **Average Search/Insert:** $O(\\log N)$\n- **Worst Case Search (Skew Tree):** $O(N)$",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nBSTs maintain a strict sorted ordering. An in-order traversal of a BST always yields elements in sorted order. Insertions and deletions preserve the BST invariant.\n\n### Real-world Analogy\nThink of a sorted shelf of folders. If you search for folder \"M\", you ignore folders \"A-L\" to the left, and folders \"N-Z\" to the right, cutting the search space in half.",
+              "order": 1
+            },
+            {
+              "title": "2. BST Invariant Search",
+              "content": "```text\n          [ 8 ]\n         /     \\\n      [ 3 ]   [ 10 ]\n    To search 9: 9 > 8 -> right. 9 < 10 -> left.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Degeneration:** Inserting pre-sorted items (1, 2, 3...) degrades the BST into a linked list with $O(N)$ search. Use self-balancing AVL/Red-Black trees.\n2. **In-order Pred/Succ Errors:** Deleting nodes with two children incorrectly maps replacement keys.\n\n### Interview Key Notes\n- In-order traversal of BST gives sorted keys.\n- To delete a node with two children, replace it with its in-order successor (min in right subtree).",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### In-order Successor\n- Min value in Right Subtree: traverse left repeatedly from right child.\n\n### Checklist\n- [x] BST insert/delete verified\n- [x] Validate BST logic implemented",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "BST Search & Insertion",
+            "slug": "bst-bst-search-insertion",
+            "description": "Deep-dive tutorial guide on BST Search & Insertion within BST."
+          },
+          {
+            "name": "BST Deletion",
+            "slug": "bst-bst-deletion",
+            "description": "Deep-dive tutorial guide on BST Deletion within BST."
+          },
+          {
+            "name": "Inorder Successor/Predecessor",
+            "slug": "bst-inorder-successor-predecessor",
+            "description": "Deep-dive tutorial guide on Inorder Successor/Predecessor within BST."
+          },
+          {
+            "name": "AVL Tree Rotations",
+            "slug": "bst-avl-tree-rotations",
+            "description": "Deep-dive tutorial guide on AVL Tree Rotations within BST."
+          },
+          {
+            "name": "Red-Black Tree Properties",
+            "slug": "bst-red-black-tree-properties",
+            "description": "Deep-dive tutorial guide on Red-Black Tree Properties within BST."
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Trie",
+        "slug": "trie",
+        "description": "Prefix retrieval trees, auto-complete index engines, and word grids.",
+        "theory": {
+          "overview": "Tries (Prefix Trees) are character-pointer trees designed for rapid prefix matching, autocomplete searches, and dictionary checks.",
+          "complexityAnalysis": "### Computational Complexities\n- **Insert / Search Word:** $O(L)$ where $L$ is the word length.\n- **Space Complexity:** $O(N \\times Alphabet)$ where $N$ is total characters.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nTries store characters at nodes, and paths from root map words. Each node has a pointer array (alphabet size) and a boolean flag indicating if it represents a complete word.\n\n### Real-world Analogy\nThink of an autocomplete search bar on a browser. As you type \"c-a-t\", the search engine traces the path \"c\" -> \"a\" -> \"t\" in a trie to fetch matching suggestions.",
+              "order": 1
+            },
+            {
+              "title": "2. Prefix Branching",
+              "content": "```text\nRoot ---> [c] ---> [a] ---> [t]* (isWord = true)\n                        ---> [p]* (isWord = true) (cap)\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **High Memory Waste:** Reserving $26$ pointer slots for every single node in sparse tries. Consider using a `HashMap` for child mapping to save space.\n2. **Missing Terminal Flags:** Inserting \"cat\" but forgetting to set the `isEndOfWord` flag on the \"t\" node.\n\n### Interview Key Notes\n- Explain the trade-off: Tries are faster than HashMaps for prefix search but use more memory.\n- Implement child nodes using an array of size 26 for simplicity.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Trie Node Code (Java)\n```java\nclass TrieNode {\n    TrieNode[] children = new TrieNode[26];\n    boolean isWord;\n}\n```\n\n### Checklist\n- [x] Word insertions implemented\n- [x] Prefix search sweeps tested",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Standard Trie Design",
+            "slug": "trie-standard-trie-design",
+            "description": "Deep-dive tutorial guide on Standard Trie Design within Trie."
+          },
+          {
+            "name": "Prefix Searches",
+            "slug": "trie-prefix-searches",
+            "description": "Deep-dive tutorial guide on Prefix Searches within Trie."
+          },
+          {
+            "name": "Word Dictionary search",
+            "slug": "trie-word-dictionary-search",
+            "description": "Deep-dive tutorial guide on Word Dictionary search within Trie."
+          },
+          {
+            "name": "AutoComplete Design",
+            "slug": "trie-autocomplete-design",
+            "description": "Deep-dive tutorial guide on AutoComplete Design within Trie."
+          },
+          {
+            "name": "XOR Maximization Trie",
+            "slug": "trie-xor-maximization-trie",
+            "description": "Deep-dive tutorial guide on XOR Maximization Trie within Trie."
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Graph",
+        "slug": "graph",
+        "description": "Adjacency links, nodes, DFS/BFS traversals, and connectivity runs.",
+        "theory": {
+          "overview": "Graphs are structures of vertices (nodes) and edges (connections), modeling social networks, routing maps, and dependency graphs.",
+          "complexityAnalysis": "### Computational Complexities\n- **BFS / DFS:** $O(V + E)$ time complexity.\n- **Space Complexity:** $O(V + E)$ for Adjacency List.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nGraphs represent relational data. Vertices are mapped via Adjacency Lists or Adjacency Matrices. BFS sweeps level-by-level (finding shortest paths), while DFS dives deep into paths.\n\n### Real-world Analogy\nThink of a social network like LinkedIn. People are vertices, and connections are edges. BFS is like finding all 1st-degree connections, then 2nd-degree connections.",
+              "order": 1
+            },
+            {
+              "title": "2. BFS Queue Sweep",
+              "content": "```text\nQueue: [A] ---> Dequeue A, Visit Neighbors (B, C) ---> Queue: [B, C]\nResolves shortest path distances in unweighted edges.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Infinite Loop in Cyclic Graphs:** Forgetting to maintain a `visited` set during traversals, leading to crash loops.\n2. **Incorrect Adjacency representation:** Using an adjacency matrix ($O(V^2)$ space) when vertices are sparse. Use Adjacency Lists ($O(V+E)$ space).\n\n### Interview Key Notes\n- Use BFS for shortest path on unweighted graphs.\n- Mention topological sort (DFS + Stack) for task dependencies.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Complexity Sheet\n- Adjacency List Space: $O(V+E)$\n- BFS/DFS Time: $O(V+E)$\n\n### Checklist\n- [x] Cycle validation tested\n- [x] BFS shortest path confirmed",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Adjacency Matrix & List",
+            "slug": "graph-adjacency-matrix-list",
+            "description": "Deep-dive tutorial guide on Adjacency Matrix & List within Graph."
+          },
+          {
+            "name": "Breadth First Search (BFS)",
+            "slug": "graph-breadth-first-search-bfs-",
+            "description": "Deep-dive tutorial guide on Breadth First Search (BFS) within Graph."
+          },
+          {
+            "name": "Depth First Search (DFS)",
+            "slug": "graph-depth-first-search-dfs-",
+            "description": "Deep-dive tutorial guide on Depth First Search (DFS) within Graph."
+          },
+          {
+            "name": "Cycle Detection",
+            "slug": "graph-cycle-detection",
+            "description": "Deep-dive tutorial guide on Cycle Detection within Graph."
+          },
+          {
+            "name": "Topological Sorting",
+            "slug": "graph-topological-sorting",
+            "description": "Deep-dive tutorial guide on Topological Sorting within Graph."
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Advanced Graphs",
+        "slug": "advanced-graphs",
+        "description": "Shortest paths (Dijkstra, Bellman-Ford), MSTs (Kruskal, Prim), and Max Flows.",
+        "theory": {
+          "overview": "Advanced Graphs cover Shortest Paths (Dijkstra, Bellman-Ford, Floyd-Warshall) and Minimum Spanning Trees (Kruskal, Prim).",
+          "complexityAnalysis": "### Computational Complexities\n- **Dijkstra:** $O(E \\log V)$ time.\n- **Kruskal:** $O(E \\log E)$ time due to edge sorting.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nAdvanced graphs deal with weighted edges. Dijkstra's algorithm updates distances greedily using a priority queue. Union-Find Disjoint Set (DSU) checks cycle connections for Kruskal's MST.\n\n### Real-world Analogy\nThink of a GPS mapping app like Google Maps. Finding the fastest path between cities with traffic (weighted edges) uses Dijkstra's algorithm to find the absolute shortest path.",
+              "order": 1
+            },
+            {
+              "title": "2. Prim's MST Sweep",
+              "content": "```text\nStart at node. Push edges to Priority Queue.\nExtract min edge. If destination unvisited, add to MST.\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Dijkstra on Negative Weights:** Dijkstra fails on negative edge weights. Use Bellman-Ford instead.\n2. **Union-Find without Optimization:** Implementing DSU without path compression and union by rank, degrading search to $O(V)$ time.\n\n### Interview Key Notes\n- Mention Bellman-Ford for negative cycles.\n- Explain DSU Path Compression ($O(\\alpha(N))$ time).",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### DSU Path Compression\n```java\nint find(int i) {\n    if (parent[i] == i) return i;\n    return parent[i] = find(parent[i]); // Path compression!\n}\n```\n\n### Checklist\n- [x] Dijkstra priorities tested\n- [x] Union-Find ranks verified",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Dijkstra Shortest Path",
+            "slug": "advanced-graphs-dijkstra-shortest-path",
+            "description": "Deep-dive tutorial guide on Dijkstra Shortest Path within Advanced Graphs."
+          },
+          {
+            "name": "Bellman-Ford Algorithm",
+            "slug": "advanced-graphs-bellman-ford-algorithm",
+            "description": "Deep-dive tutorial guide on Bellman-Ford Algorithm within Advanced Graphs."
+          },
+          {
+            "name": "Floyd-Warshall Multi-Source",
+            "slug": "advanced-graphs-floyd-warshall-multi-source",
+            "description": "Deep-dive tutorial guide on Floyd-Warshall Multi-Source within Advanced Graphs."
+          },
+          {
+            "name": "Prim's MST",
+            "slug": "advanced-graphs-prim-s-mst",
+            "description": "Deep-dive tutorial guide on Prim's MST within Advanced Graphs."
+          },
+          {
+            "name": "Kruskal's MST",
+            "slug": "advanced-graphs-kruskal-s-mst",
+            "description": "Deep-dive tutorial guide on Kruskal's MST within Advanced Graphs."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Advanced Data Structures",
+    "slug": "advanced-data-structures",
+    "description": "Master all fundamental and advanced modules in Advanced Data Structures.",
+    "topics": [
+      {
+        "id": 20,
+        "name": "Segment Tree",
+        "slug": "segment-tree",
+        "description": "Interval range queries, logarithmic range updates, and array splits.",
+        "theory": {
+          "overview": "Segment Trees are binary trees storing intervals, supporting range queries and updates in logarithmic time.",
+          "complexityAnalysis": "### Computational Complexities\n- **Query / Update:** $O(\\log N)$ time.\n- **Tree Build:** $O(N)$ time.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nSegment Trees divide arrays into recursive halves, saving interval sums or min/max values in parent nodes. They handle range updates efficiently using Lazy Propagation.\n\n### Real-world Analogy\nThink of a retail manager tracking sales. Instead of counting individual receipts, the manager queries monthly summaries (precomputed intervals) to find ranges in seconds.",
+              "order": 1
+            },
+            {
+              "title": "2. Range Division Node",
+              "content": "```text\n            [ 0 - 3 ] (Sum = 20)\n           /         \\\n     [ 0 - 1 ]      [ 2 - 3 ]\n      (Sum = 8)      (Sum = 12)\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **Index Calculations:** Mixing segment tree array indexes ($4N$ size needed) with original array bounds.\n2. **Lazy Propagation Forgotten:** Performing range updates in $O(N \\log N)$ instead of $O(\\log N)$ via lazy flags.\n\n### Interview Key Notes\n- Point out the $4N$ memory size requirement.\n- Clearly explain range query divisions.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### Array Size Requirement\n- Reserving `4 * N` slots in the segment tree array prevents out-of-bounds crashes.\n\n### Checklist\n- [x] Lazy propagation verified\n- [x] Tree build logic tested",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Segment Tree Construction",
+            "slug": "segment-tree-segment-tree-construction",
+            "description": "Deep-dive tutorial guide on Segment Tree Construction within Segment Tree."
+          },
+          {
+            "name": "Range Sum Query",
+            "slug": "segment-tree-range-sum-query",
+            "description": "Deep-dive tutorial guide on Range Sum Query within Segment Tree."
+          },
+          {
+            "name": "Point Updates",
+            "slug": "segment-tree-point-updates",
+            "description": "Deep-dive tutorial guide on Point Updates within Segment Tree."
+          },
+          {
+            "name": "Lazy Propagation",
+            "slug": "segment-tree-lazy-propagation",
+            "description": "Deep-dive tutorial guide on Lazy Propagation within Segment Tree."
+          },
+          {
+            "name": "Interval Overlaps",
+            "slug": "segment-tree-interval-overlaps",
+            "description": "Deep-dive tutorial guide on Interval Overlaps within Segment Tree."
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Fenwick Tree",
+        "slug": "fenwick-tree",
+        "description": "Binary Indexed Trees, prefix updates, and quick point sums.",
+        "theory": {
+          "overview": "Fenwick Trees (Binary Indexed Trees) support range sum queries and point updates using bitwise indexes.",
+          "complexityAnalysis": "### Computational Complexities\n- **Query / Update:** $O(\\log N)$ time.\n- **Space Complexity:** $O(N)$ auxiliary array.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nFenwick Trees store cumulative sums. Bitwise indexing (`idx & -idx`) isolates the lowest set bit to find parent ranges, saving significant memory compared to Segment Trees.\n\n### Real-world Analogy\nThink of a calendar organizer. Instead of writing daily summaries, you log weekly and monthly totals, allowing quick calculation of any range using simple subtraction.",
+              "order": 1
+            },
+            {
+              "title": "2. Bitwise Index Navigation",
+              "content": "```text\nUpdate:  idx += (idx & -idx) (propagate up)\nQuery:   idx -= (idx & -idx) (accumulate down)\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **1-Based Indexing Violations:** Fenwick Trees MUST use 1-based indexing. Index 0 causes an infinite bitwise loop.\n2. **Unpredictable Queries:** Querying ranges without subtracting (`Sum(L, R) = prefix(R) - prefix(L-1)`).\n\n### Interview Key Notes\n- Highlight that BIT uses exactly $N$ space compared to $4N$ in Segment Trees.\n- Demonstrate binary bitwise updates.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### BIT Code Snippet (Java)\n```java\nvoid update(int idx, int val) {\n    for (; idx < tree.length; idx += idx & -idx) tree[idx] += val;\n}\nint query(int idx) {\n    int sum = 0;\n    for (; idx > 0; idx -= idx & -idx) sum += tree[idx];\n    return sum;\n}\n```\n\n### Checklist\n- [x] 1-based indexes verified\n- [x] Point updates verified",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Fenwick Structure",
+            "slug": "fenwick-tree-fenwick-structure",
+            "description": "Deep-dive tutorial guide on Fenwick Structure within Fenwick Tree."
+          },
+          {
+            "name": "Point Update Prefix Queries",
+            "slug": "fenwick-tree-point-update-prefix-queries",
+            "description": "Deep-dive tutorial guide on Point Update Prefix Queries within Fenwick Tree."
+          },
+          {
+            "name": "Range Sum Queries",
+            "slug": "fenwick-tree-range-sum-queries",
+            "description": "Deep-dive tutorial guide on Range Sum Queries within Fenwick Tree."
+          },
+          {
+            "name": "Inversion Count",
+            "slug": "fenwick-tree-inversion-count",
+            "description": "Deep-dive tutorial guide on Inversion Count within Fenwick Tree."
+          },
+          {
+            "name": "Coordinate Compression",
+            "slug": "fenwick-tree-coordinate-compression",
+            "description": "Deep-dive tutorial guide on Coordinate Compression within Fenwick Tree."
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Disjoint Set",
+        "slug": "disjoint-set",
+        "description": "Union-find structures, path compressions, and rank union checks.",
+        "theory": {
+          "overview": "Disjoint Set Union (DSU) tracks partitioning of elements into disjoint subsets, supporting rapid union and find operations.",
+          "complexityAnalysis": "### Computational Complexities\n- **Find / Union:** $O(\\alpha(N))$ time (Inverse Ackermann function - virtually constant time).\n- **Space Complexity:** $O(N)$ parent array.",
+          "sections": [
+            {
+              "title": "1. Introduction & Real-world Analogy",
+              "content": "### Core Explanation\nDSU manages dynamic connectivity. **Path Compression** flattens the tree structure upon search, while **Union by Rank** keeps tree depths small, ensuring near constant-time connectivity checks.\n\n### Real-world Analogy\nThink of mergers between corporate departments. When department A merges with department B, we choose the larger department head to lead them both. If anyone asks who they report to, they point directly to the CEO (Path Compression).",
+              "order": 1
+            },
+            {
+              "title": "2. Flattened Path Connection",
+              "content": "```text\nInitial:  [1] -> [2] -> [3] -> [CEO]\nFind(1):  Flattens paths directly. Result: [1] -> [CEO], [2] -> [CEO], [3] -> [CEO]\n```",
+              "order": 2
+            },
+            {
+              "title": "3. Common Pitfalls & Interview Notes",
+              "content": "### Common Mistakes\n1. **No Path Compression:** Forgetting to compress paths, degrading search time to $O(N)$.\n2. **Incorrect Ranks:** Merging trees randomly instead of checking ranks, resulting in deep unbalanced hierarchies.\n\n### Interview Key Notes\n- Explain the virtually constant $O(\\alpha(N))$ bounds.\n- Mention DSU for cycle validation in undirected graphs.",
+              "order": 3
+            },
+            {
+              "title": "4. Cheat Sheet & Checklist",
+              "content": "### DSU Class (Java)\n```java\nclass DSU {\n    int[] parent, rank;\n    DSU(int n) {\n        parent = new int[n]; rank = new int[n];\n        for (int i = 0; i < n; i++) parent[i] = i;\n    }\n    int find(int i) {\n        if (parent[i] == i) return i;\n        return parent[i] = find(parent[i]);\n    }\n    void union(int i, int j) {\n        int rootI = find(i), rootJ = find(j);\n        if (rootI != rootJ) {\n            if (rank[rootI] < rank[rootJ]) parent[rootI] = rootJ;\n            else if (rank[rootI] > rank[rootJ]) parent[rootJ] = rootI;\n            else { parent[rootJ] = rootI; rank[rootI]++; }\n        }\n    }\n}\n```\n\n### Checklist\n- [x] Path compression implemented\n- [x] Kruskal cycle validations checked",
+              "order": 4
+            }
+          ]
+        },
+        "subtopics": [
+          {
+            "name": "Union Find Basics",
+            "slug": "disjoint-set-union-find-basics",
+            "description": "Deep-dive tutorial guide on Union Find Basics within Disjoint Set."
+          },
+          {
+            "name": "Union by Rank/Size",
+            "slug": "disjoint-set-union-by-rank-size",
+            "description": "Deep-dive tutorial guide on Union by Rank/Size within Disjoint Set."
+          },
+          {
+            "name": "Path Compression",
+            "slug": "disjoint-set-path-compression",
+            "description": "Deep-dive tutorial guide on Path Compression within Disjoint Set."
+          },
+          {
+            "name": "Kruskal's Helper DS",
+            "slug": "disjoint-set-kruskal-s-helper-ds",
+            "description": "Deep-dive tutorial guide on Kruskal's Helper DS within Disjoint Set."
+          },
+          {
+            "name": "Dynamic Connectivity",
+            "slug": "disjoint-set-dynamic-connectivity",
+            "description": "Deep-dive tutorial guide on Dynamic Connectivity within Disjoint Set."
+          }
+        ]
+      }
+    ]
+  }
+]
