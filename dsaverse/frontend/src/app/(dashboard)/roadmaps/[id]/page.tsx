@@ -592,33 +592,8 @@ export default function RoadmapDetailPage({ params }: PageProps) {
 
                 {/* Guides Tab */}
                 <TabsContent value="guides" className="space-y-4 focus:outline-none">
-                  {/* YouTube resource list */}
-                  <div className="space-y-3">
-                    <h4 className="text-[11px] font-black uppercase tracking-wider text-zinc-400">
-                      YouTube Guides & Playlists
-                    </h4>
-                    {selectedNode.youtubeResources && selectedNode.youtubeResources.length > 0 ? (
-                      <div className="space-y-2">
-                        {selectedNode.youtubeResources.map((link, idx) => (
-                          <a 
-                            key={idx}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-between p-3 rounded-xl border border-zinc-900 bg-zinc-900/20 hover:border-indigo-900/50 hover:bg-zinc-900/40 transition-all text-xs font-bold text-zinc-200 hover:text-white"
-                          >
-                            <span>{link.title}</span>
-                            <ExternalLink size={12} className="text-indigo-400 shrink-0" />
-                          </a>
-                        ))}
-                      </div>
-                    ) : (
-                      <p className="text-zinc-600 text-xs italic">No YouTube guides linked.</p>
-                    )}
-                  </div>
-
                   {/* Leetcode practice lists */}
-                  <div className="space-y-3 pt-3 border-t border-zinc-900/60">
+                  <div className="space-y-3">
                     <h4 className="text-[11px] font-black uppercase tracking-wider text-zinc-400">
                       Leetcode Curated Links
                     </h4>
@@ -897,17 +872,7 @@ function RoadmapQuestionRow({ question, isSolved, onSolvedChange }: RoadmapQuest
             <ExternalLink size={8} />
           </a>
         )}
-        {question.youtubeUrl && (
-          <a 
-            href={question.youtubeUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-[9px] font-bold text-rose-450 hover:text-rose-305 bg-rose-950/20 border border-rose-900/30 px-2 py-0.5 rounded transition-colors"
-          >
-            Video Solution
-            <Play size={8} fill="currentColor" />
-          </a>
-        )}
+
       </div>
 
       {/* Slide-out Notes Box */}

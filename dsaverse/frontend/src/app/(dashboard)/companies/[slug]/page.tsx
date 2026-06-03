@@ -432,11 +432,7 @@ export default function CompanyDetailPage({ params }: PageProps) {
                                 <GraduationCap size={15} />
                               </a>
                             )}
-                            {q.youtubeUrl && (
-                              <a href={q.youtubeUrl} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-red-500 transition-colors">
-                                <Video size={15} />
-                              </a>
-                            )}
+
                           </div>
                         </TableCell>
 
