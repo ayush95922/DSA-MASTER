@@ -219,8 +219,10 @@ export default function TopicDetailPage({ params }: PageProps) {
                       </TableCell>
                       <TableCell className="py-4">
                         <div className="flex flex-wrap gap-2">
-                          {q.externalLinks && q.externalLinks.length > 0 ? (
-                            q.externalLinks.map((link, idx) => (
+                          {q.externalLinks && q.externalLinks.filter((link) => link.platformName.toUpperCase() !== 'YOUTUBE').length > 0 ? (
+                            q.externalLinks
+                              .filter((link) => link.platformName.toUpperCase() !== 'YOUTUBE')
+                              .map((link, idx) => (
                               <a
                                 key={idx}
                                 href={link.url}
