@@ -55,3 +55,8 @@ coverage/
 *.bak
 *.tmp
 *.temp
+
+# ===== H2 Database =====
+backend/data/
+*.mv.db
+*.trace.db
