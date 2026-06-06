@@ -8,9 +8,9 @@ spring:
 
   # ==================== Database ====================
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:dsaverse}
-    username: ${DB_USERNAME:dsaverse}
-    password: ${DB_PASSWORD:dsaverse_dev_2026}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:dsaverse}?sslmode=${DB_SSLMODE:disable}}
+    username: ${SPRING_DATASOURCE_USERNAME:${DB_USERNAME:dsaverse}}
+    password: ${SPRING_DATASOURCE_PASSWORD:${DB_PASSWORD:dsaverse_dev_2026}}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 20
