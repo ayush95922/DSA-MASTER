@@ -53,7 +53,7 @@ import java.util.Optional;
  */
 @Slf4j
 @Configuration
-@Profile("dev")
+@Profile({"dev", "seed"})
 @RequiredArgsConstructor
 public class DevDataSeeder {
 

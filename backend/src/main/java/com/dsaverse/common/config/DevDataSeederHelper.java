@@ -55,7 +55,7 @@ import com.dsaverse.roadmap.repository.UserRoadmapEnrollmentRepository;
 
 @Slf4j
 @Component
-@Profile("dev")
+@Profile({"dev", "seed"})
 @RequiredArgsConstructor
 @SuppressWarnings({"unchecked", "null"})
 public class DevDataSeederHelper {
@@ -84,8 +84,23 @@ public class DevDataSeederHelper {
     public void seed() {
         log.info("Purging legacy development database tables for a fresh seeding cycle...");
         
-        // Disable referential integrity check in H2 for this session/transaction
-        entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY FALSE").executeUpdate();
+        String dbProduct = "";
+        try {
+            dbProduct = entityManager.unwrap(org.hibernate.Session.class)
+                    .doReturningWork(conn -> conn.getMetaData().getDatabaseProductName());
+            log.info("Detected database product name: {}", dbProduct);
+        } catch (Exception e) {
+            log.warn("Could not detect database product name: {}", e.getMessage());
+        }
+
+        // Disable referential integrity check in H2 (for PostgreSQL, we rely on cascade truncates and delete order)
+        try {
+            if ("H2".equalsIgnoreCase(dbProduct)) {
+                entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY FALSE").executeUpdate();
+            }
+        } catch (Exception e) {
+            log.warn("Could not disable H2 referential integrity: {}", e.getMessage());
+        }
         
         roadmapNodeProgressRepository.deleteAllInBatch();
         roadmapEnrollmentRepository.deleteAllInBatch();
@@ -102,19 +117,26 @@ public class DevDataSeederHelper {
         questionRepository.deleteAllInBatch();
         
         // Truncate non-repository dependent/join tables
-        entityManager.createNativeQuery("TRUNCATE TABLE approaches").executeUpdate();
-        entityManager.createNativeQuery("TRUNCATE TABLE external_links").executeUpdate();
-        entityManager.createNativeQuery("TRUNCATE TABLE question_topic_tags").executeUpdate();
-        entityManager.createNativeQuery("TRUNCATE TABLE roadmap_node_dependencies").executeUpdate();
-        entityManager.createNativeQuery("TRUNCATE TABLE subtopics").executeUpdate();
-        entityManager.createNativeQuery("TRUNCATE TABLE theory_sections").executeUpdate();
-        entityManager.createNativeQuery("TRUNCATE TABLE theory_contents").executeUpdate();
+        String cascade = "PostgreSQL".equalsIgnoreCase(dbProduct) ? " CASCADE" : "";
+        entityManager.createNativeQuery("TRUNCATE TABLE approaches" + cascade).executeUpdate();
+        entityManager.createNativeQuery("TRUNCATE TABLE external_links" + cascade).executeUpdate();
+        entityManager.createNativeQuery("TRUNCATE TABLE question_topic_tags" + cascade).executeUpdate();
+        entityManager.createNativeQuery("TRUNCATE TABLE roadmap_node_dependencies" + cascade).executeUpdate();
+        entityManager.createNativeQuery("TRUNCATE TABLE subtopics" + cascade).executeUpdate();
+        entityManager.createNativeQuery("TRUNCATE TABLE theory_sections" + cascade).executeUpdate();
+        entityManager.createNativeQuery("TRUNCATE TABLE theory_contents" + cascade).executeUpdate();
         
         topicRepository.deleteAllInBatch();
         categoryRepository.deleteAllInBatch();
         
-        // Re-enable referential integrity check in H2
-        entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY TRUE").executeUpdate();
+        // Re-enable referential integrity check
+        try {
+            if ("H2".equalsIgnoreCase(dbProduct)) {
+                entityManager.createNativeQuery("SET REFERENTIAL_INTEGRITY TRUE").executeUpdate();
+            }
+        } catch (Exception e) {
+            log.warn("Could not restore H2 referential integrity: {}", e.getMessage());
+        }
 
         // 1. Seed Roles
         if (roleRepository.count() == 0) {
