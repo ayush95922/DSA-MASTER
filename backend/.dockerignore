@@ -1,0 +1,7 @@
+target/
+.mvn/
+*.db
+*.log
+.git/
+Dockerfile
+.dockerignore
