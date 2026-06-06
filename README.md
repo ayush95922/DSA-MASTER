@@ -299,6 +299,28 @@ Contributions, suggestions, and improvements are welcome.
 
 ---
 
+## 🎮 Demo Account
+
+You can explore the platform using the demo account below:
+
+**Email:** `ayushshrivastava246@gmail.com`
+
+**Password:** `ayush123`
+
+### Demo Features
+
+* Explore DSA Roadmaps
+* Browse Topics & Theory Content
+* Access Question Banks
+* Company Preparation Hubs
+* Progress Tracking
+* Analytics Dashboard
+* AI Tutor (requires valid AI configuration)
+
+> Note: This is a demo account intended for evaluation and testing purposes only.
+
+---
+
 ## 📜 License
 
 This project is released under the MIT License.
