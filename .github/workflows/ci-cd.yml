@@ -51,7 +51,7 @@ jobs:
 
       - name: Build Next.js Application
         env:
-          NEXT_PUBLIC_API_URL: https://dsaverse-backend-placeholder.onrender.com/api
+          NEXT_PUBLIC_API_URL: https://dsa-master-rcfh.onrender.com/api
           NEXT_TELEMETRY_DISABLED: 1
         run: |
           cd frontend
