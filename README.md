@@ -303,7 +303,7 @@ Contributions, suggestions, and improvements are welcome.
 
 You can explore the platform using the demo account below:
 
-**Email:** `ayushshrivastava246@gmail.com`
+**Email:** `ayush@demo.in`
 
 **Password:** `ayush123`
 
